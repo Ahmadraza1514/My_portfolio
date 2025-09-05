@@ -691,7 +691,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(rgba(0, 0, 0, 0.1), var(--accent-color));
+        background: linear-gradient(rgba(255, 255, 255, 0.1), var(--accent-color));
         display: flex;
         justify-content: center;
         align-items: center;
@@ -727,6 +727,7 @@
         gap: 10px;
         justify-content: center;
         margin-bottom: 20px;
+        flex-wrap: wrap;
       }
 
       .project-tag {
@@ -855,6 +856,10 @@
       .contact-card h3 {
         font-size: 24px;
         margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
       }
 
       .contact-card p {
@@ -917,6 +922,10 @@
         transition: all 0.3s ease;
         width: 100%;
         box-shadow: var(--neon-glow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
       }
 
       .submit-btn:hover {
@@ -1046,10 +1055,43 @@
         padding: 20px;
       }
 
-      .project-detail-video {
+      .video-placeholder {
         width: 100%;
         border-radius: 10px;
         margin-bottom: 20px;
+        position: relative;
+        background: var(--primary-color);
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .video-placeholder-img {
+        width: 100%;
+        border-radius: 10px;
+        opacity: 0.7;
+      }
+
+      .view-video-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 25px;
+        background: var(--accent-color);
+        color: #000;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .view-video-btn:hover {
+        background: #fff;
+        transform: translateY(-3px);
       }
 
       .project-detail-images {
@@ -1394,7 +1436,7 @@
             </div>
             <div class="about-content" data-aos="fade-left">
                 <h2 class="section-title">About <span>Me</span></h2>
-                <p class="about-text">With 3 years of experience in creating engaging and immersive digital experiences. My expertise lies in augmented reality (AR) and virtual reality (VR) technologies, where I combine creativity and technical skills to develop innovative games and applications. I am passionate about pushing the boundaries of interactive entertainment and delivering exceptional results. Let's bring your vision to life!</p>
+                <p class="about-text">With 4 years of experience in creating engaging and immersive digital experiences. My expertise lies in augmented reality (AR) and virtual reality (VR) technologies, where I combine creativity and technical skills to develop innovative games and applications. I am passionate about pushing the boundaries of interactive entertainment and delivering exceptional results. Let's bring your vision to life!</p>
                 
                 <div class="about-info">
                     <div class="info-item">
@@ -1483,7 +1525,7 @@
             <div class="timeline">
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-content">
-                        <div class="timeline-date">2022 - Present</div>
+                        <div class="timeline-date">2022 - 2025</div>
                         <h3 class="timeline-title">Software Engineer</h3>
                         <div class="timeline-company">Conovo Technologies</div>
                         <p class="timeline-description">Conovo Technologies is a leading company in providing custom game development and AR/VR solutions.</p>
@@ -1515,143 +1557,146 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="projects-container">
-            <h2 class="section-title" data-aos="fade-up">My <span>Projects</span></h2>
-            <p class="about-text" style="text-align: center; max-width: 800px; margin: 0 auto 50px;" data-aos="fade-up" data-aos-delay="100">A selection of my recent work showcasing my skills in AR/VR and game development.</p>
+   <!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="projects-container">
+        <h2 class="section-title" data-aos="fade-up">My <span>Projects</span></h2>
+        <p class="about-text" style="text-align: center; max-width: 800px; margin: 0 auto 50px;" data-aos="fade-up" data-aos-delay="100">
+            A selection of my recent work showcasing my skills in AR/VR and game development.
+        </p>
+        
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/proj_1.jpg" alt="Driving Training Tutorial" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Driving Training Tutorial</h3>
+                    <p class="project-description">Immersive mixed reality driving lessons app for HoloLens integrating traffic signs and essential driving rules.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">HoloLens</span>
+                        <span class="project-tag">MRTK</span>
+                    </div>
+                    <a href="#" class="project-link view-project" data-project-id="driving-training">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
             
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Driving Training Tutorial" class="project-image">
-                    <div class="project-overlay">
-                        <h3 class="project-title">Driving Training Tutorial</h3>
-                        <p class="project-description">Immersive mixed reality driving lessons app for HoloLens integrating traffic signs and essential driving rules.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">HoloLens</span>
-                            <span class="project-tag">MRTK</span>
-                        </div>
-                        <a href="#" class="project-link view-project" data-project-id="driving-training">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/proj_2.jpg" alt="VR Video Player" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">VR Video Player</h3>
+                    <p class="project-description">VR video player application for WebGL using Unity and C# with focus on video playback and UI interaction.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">WebGL</span>
+                        <span class="project-tag">VR</span>
                     </div>
+                    <a href="#" class="project-link view-project" data-project-id="vr-video-player">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="VR Video Player" class="project-image">
-                    <div class="project-overlay">
-                        <h3 class="project-title">VR Video Player</h3>
-                        <p class="project-description">VR video player application for WebGL using Unity and C# with focus on video playback and UI interaction.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">WebGL</span>
-                            <span class="project-tag">VR</span>
-                        </div>
-                        <a href="#" class="project-link view-project" data-project-id="vr-video-player">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+            </div>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/proj_3.jpg" alt="AR Drawing App" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">AR Drawing App</h3>
+                    <p class="project-description">Augmented reality drawing application where users can create and interact with digital artwork in 3D space.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">AR Foundation</span>
+                        <span class="project-tag">Mobile</span>
                     </div>
+                    <a href="#" class="project-link view-project" data-project-id="ar-drawing">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AR Drawing App" class="project-image">
-                    <div class="project-overlay">
-                        <h3 class="project-title">AR Drawing App</h3>
-                        <p class="project-description">Augmented reality drawing application where users can create and interact with digital artwork in 3D space.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">AR Foundation</span>
-                            <span class="project-tag">Mobile</span>
-                        </div>
-                        <a href="#" class="project-link view-project" data-project-id="ar-drawing">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+            </div>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                <img src="images/proj_4.jpg" alt="Falcon Strike" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Falcon Strike</h3>
+                    <p class="project-description">Game project integrating UI systems with AWS S3 Bucket for dynamic content loading and ScriptableObjects for levels.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">AWS</span>
+                        <span class="project-tag">Game Design</span>
                     </div>
+                    <a href="#" class="project-link view-project" data-project-id="falcon-strike">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80" alt="Falcon Strike" class="project-image">
-                    <div class="project-overlay">
-                        <h3 class="project-title">Falcon Strike</h3>
-                        <p class="project-description">Game project integrating UI systems with AWS S3 Bucket for dynamic content loading and ScriptableObjects for levels.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">AWS</span>
-                            <span class="project-tag">Game Design</span>
-                        </div>
-                        <a href="#" class="project-link view-project" data-project-id="falcon-strike">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+            </div>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                <img src="images/proj_5.jpg" alt="Poker♡Poker" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Poker♡Poker</h3>
+                    <p class="project-description">Online multiplayer Card game with Custom Backend.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">FireBase</span>
+                        <span class="project-tag">C#</span>
                     </div>
+                    <a href="#" class="project-link view-project" data-project-id="ml-unity">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="ML Unity Training" class="project-image">
-                    <div class="project-overlay">
-                        <h3 class="project-title">ML Unity Training</h3>
-                        <p class="project-description">Unity project using Unity Barracuda to train and run machine learning models directly in the engine.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">ML</span>
-                            <span class="project-tag">Barracuda</span>
-                        </div>
-                        <a href="#" class="project-link view-project" data-project-id="ml-unity">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+            </div>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                <img src="images/proj_6.png" alt="AR Furniture App" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Drone Strike</h3>
+                    <p class="project-description">Drone Strike is an action-packed game centered around tactical drone combat.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">AI Path Finding</span>
                     </div>
+                    <a href="#" class="project-link view-project" data-project-id="ar-furniture">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-                    <img src="https://images.unsplash.com/photo-1616007736933-54d2525a2c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AR Furniture" class="project-image">
-                    <div class="project-overlay">
-                        <h3 class="project-title">AR Furniture App</h3>
-                        <p class="project-description">Augmented reality application for placing virtual furniture in real environment using ARCore and ARFoundation.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">ARCore</span>
-                            <span class="project-tag">Mobile</span>
-                        </div>
-                        <a href="#" class="project-link view-project" data-project-id="ar-furniture">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+            </div>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                <img src="images/proj_7.jpg" alt="VR Escape Room" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Meta Clash</h3>
+                    <p class="project-description">Meta Clash is a strategy building Game</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">Build/Fight</span>
                     </div>
+                    <a href="#" class="project-link view-project" data-project-id="vr-escape">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-                    <img src="https://images.unsplash.com/photo-1633287387306-f08b4b7051db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="VR Escape Room" class="project-image">
-                    <div class="project-overlay">
-                        <h3 class="project-title">VR Escape Room</h3>
-                        <p class="project-description">Immersive VR puzzle game where players solve challenges to escape from a virtual room using Oculus Quest.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">Oculus</span>
-                            <span class="project-tag">VR</span>
-                        </div>
-                        <a href="#" class="project-link view-project" data-project-id="vr-escape">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+            </div>
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+                <img src="images/proj_8.jpg" alt="Multiplayer Racing" class="project-image">
+                <div class="project-overlay">
+                    <h3 class="project-title">Bad Biker</h3>
+                    <p class="project-description">Online multiplayer racing game with real-time synchronization using Photon Unity Networking.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">Fusion</span>
+                        <span class="project-tag">Multiplayer</span>
                     </div>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="900">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Multiplayer Racing" class="project-image">
-                    <div class="project-overlay">
-                        <h3 class="project-title">Multiplayer Racing</h3>
-                        <p class="project-description">Online multiplayer racing game with real-time synchronization using Photon Unity Networking.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Unity</span>
-                            <span class="project-tag">PUN</span>
-                            <span class="project-tag">Multiplayer</span>
-                        </div>
-                        <a href="#" class="project-link view-project" data-project-id="multiplayer-racing">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
+                    <a href="#" class="project-link view-project" data-project-id="multiplayer-racing">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- GitHub Section -->
     <section class="github-section">
@@ -1760,9 +1805,12 @@
                 </div>
                 <div class="project-detail-body">
                     <div class="project-detail-media">
-                        <video class="project-detail-video" id="modalProjectVideo" controls>
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="video-placeholder">
+                            <img id="modalProjectPlaceholder" class="video-placeholder-img" src="" alt="Project Video">
+                            <a href="#" id="modalProjectVideoLink" target="_blank" class="view-video-btn">
+                                <i class="fas fa-play-circle"></i> View Video on Drive
+                            </a>
+                        </div>
                         <div class="project-detail-images" id="modalProjectImages"></div>
                     </div>
                     <div class="project-detail-info">
@@ -1790,177 +1838,161 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
-        // Project data
-        const projects = {
-            "driving-training": {
-                title: "Driving Training Tutorial",
-                subtitle: "Immersive mixed reality driving lessons app for HoloLens",
-                description: "This project is an innovative mixed reality application designed for HoloLens that provides immersive driving lessons. It integrates real traffic signs and essential driving rules into a virtual environment, allowing users to practice driving in a safe yet realistic setting. The application uses Microsoft Mixed Reality Toolkit (MRTK) for intuitive interactions and spatial mapping to blend virtual content with the real world.",
-                features: [
-                    "Mixed reality driving simulation with HoloLens",
-                    "Integration of real traffic signs and rules",
-                    "Spatial mapping for realistic environment interaction",
-                    "Interactive tutorials and practice modes",
-                    "Performance analytics and progress tracking"
-                ],
-                tags: ["Unity", "HoloLens", "MRTK", "Mixed Reality"],
-                githubUrl: "https://github.com/Ahmadraza1514/Driving-Training",
-                liveUrl: "#",
-                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-                images: [
-                    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1626379953821-892898ed33a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                ]
-            },
-            "vr-video-player": {
-                title: "VR Video Player",
-                subtitle: "VR video player application for WebGL using Unity and C#",
-                description: "A virtual reality video player designed for WebGL platform with focus on immersive video playback and intuitive UI interactions. This application allows users to watch videos in a virtual cinema environment with customizable settings. The player supports various video formats and provides controls for playback, volume, and environment customization.",
-                features: [
-                    "360-degree video playback support",
-                    "Customizable virtual cinema environment",
-                    "Intuitive VR controls and UI",
-                    "WebGL compatibility",
-                    "Multi-format video support"
-                ],
-                tags: ["Unity", "WebGL", "VR", "C#"],
-                githubUrl: "https://github.com/Ahmadraza1514/Vr-Video-Player",
-                liveUrl: "#",
-                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-                images: [
-                    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
-                    "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1626379953821-892898ed33a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                ]
-            },
-            "ar-drawing": {
-                title: "AR Drawing App",
-                subtitle: "Augmented reality drawing application for creating 3D digital artwork",
-                description: "An innovative augmented reality application that allows users to create and interact with digital artwork in 3D space. Using AR Foundation and ARCore, this app enables users to draw in the air and place their creations in the real world. The application supports various brushes, colors, and effects for creating stunning AR artwork.",
-                features: [
-                    "3D drawing in augmented reality",
-                    "Multiple brush types and colors",
-                    "Real-time environment tracking",
-                    "Save and share artwork",
-                    "ARCore and AR Foundation support"
-                ],
-                tags: ["Unity", "AR Foundation", "Mobile", "ARCore"],
-                githubUrl: "https://github.com/Ahmadraza1514/AR-Drawing",
-                liveUrl: "#",
-                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-                images: [
-                    "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1626379953821-892898ed33a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                ]
-            },
-            "falcon-strike": {
-                title: "Falcon Strike",
-                subtitle: "Game project with AWS S3 integration and ScriptableObjects",
-                description: "Falcon Strike is an action game that integrates UI systems with AWS S3 Bucket for dynamic content loading. The game uses ScriptableObjects for flexible level design and game configuration. This project demonstrates advanced Unity development techniques including cloud integration, modular design, and performance optimization.",
-                features: [
-                    "AWS S3 integration for dynamic content",
-                    "ScriptableObjects for level design",
-                    "Modular UI system",
-                    "Performance optimization techniques",
-                    "Cloud save functionality"
-                ],
-                tags: ["Unity", "AWS", "Game Design", "C#"],
-                githubUrl: "https://github.com/Ahmadraza1514/Falcon-Strike/tree/main",
-                liveUrl: "#",
-                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-                images: [
-                    "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80",
-                    "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1626379953821-892898ed33a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                ]
-            },
-            "ml-unity": {
-                title: "ML Unity Training",
-                subtitle: "Machine learning in Unity using Barracuda",
-                description: "This project demonstrates how to train and run machine learning models directly in Unity using the Barracuda inference library. It includes examples of image recognition, behavior prediction, and AI-driven gameplay elements. The project showcases the integration of ML capabilities within game development workflows.",
-                features: [
-                    "Barracuda ML inference in Unity",
-                    "Image recognition models",
-                    "AI behavior prediction",
-                    "Real-time ML processing",
-                    "Custom training pipelines"
-                ],
-                tags: ["Unity", "ML", "Barracuda", "AI"],
-                githubUrl: "https://github.com/Ahmadraza1514/Machine-Learning-Unity",
-                liveUrl: "#",
-                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-                images: [
-                    "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1626379953821-892898ed33a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                ]
-            },
-            "ar-furniture": {
-                title: "AR Furniture App",
-                subtitle: "Augmented reality application for placing virtual furniture",
-                description: "An AR application that allows users to visualize furniture in their real environment before purchasing. Using ARCore and ARFoundation, the app accurately places 3D models of furniture in the user's space with realistic lighting and shadows. Users can customize colors, materials, and arrangements.",
-                features: [
-                    "AR furniture placement in real environment",
-                    "Realistic lighting and shadows",
-                    "Customizable materials and colors",
-                    "Product catalog integration",
-                    "Share configurations with others"
-                ],
-                tags: ["Unity", "ARCore", "Mobile", "ARFoundation"],
-                githubUrl: "https://github.com/Ahmadraza1514/AR-Furniture",
-                liveUrl: "#",
-                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-                images: [
-                    "https://images.unsplash.com/photo-1616007736933-54d2525a2c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1626379953821-892898ed33a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                ]
-            },
-            "vr-escape": {
-                title: "VR Escape Room",
-                subtitle: "Immersive VR puzzle game for Oculus Quest",
-                description: "A virtual reality escape room game designed for Oculus Quest where players solve puzzles and challenges to escape from a virtual room. The game features interactive objects, physics-based puzzles, and a mysterious storyline. It showcases advanced VR interaction techniques and immersive environment design.",
-                features: [
-                    "Physics-based puzzles and interactions",
-                    "Immersive VR environment",
-                    "Oculus Quest optimization",
-                    "Interactive object system",
-                    "Engaging storyline with multiple endings"
-                ],
-                tags: ["Unity", "Oculus", "VR", "Puzzle"],
-                githubUrl: "https://github.com/Ahmadraza1514/VR-Escape-Room",
-                liveUrl: "#",
-                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-                images: [
-                    "https://images.unsplash.com/photo-1633287387306-f08b4b7051db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1626379953821-892898ed33a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                ]
-            },
-            "multiplayer-racing": {
-                title: "Multiplayer Racing",
-                subtitle: "Online multiplayer racing game with Photon Unity Networking",
-                description: "A competitive multiplayer racing game that uses Photon Unity Networking for real-time synchronization between players. The game features customizable cars, multiple tracks, and a ranking system. It demonstrates advanced networking techniques and real-time multiplayer gameplay implementation.",
-                features: [
-                    "Real-time multiplayer synchronization",
-                    "Customizable vehicles and tracks",
-                    "Player ranking and matchmaking system",
-                    "Voice chat integration",
-                    "Cross-platform compatibility"
-                ],
-                tags: ["Unity", "PUN", "Multiplayer", "Racing"],
-                githubUrl: "https://github.com/Ahmadraza1514/Multiplayer-Racing",
-                liveUrl: "#",
-                videoUrl: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-                images: [
-                    "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-                    "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-                    "https://images.unsplash.com/photo-1626379953821-892898ed33a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                ]
-            }
-        };
+       // Project data
+const projects = {
+    "driving-training": {
+        title: "Driving Training Tutorial",
+        subtitle: "Immersive mixed reality driving lessons app for HoloLens",
+        description: "This project is an innovative mixed reality application designed for HoloLens that provides immersive driving lessons...",
+        features: [
+            "Mixed reality driving simulation with HoloLens",
+            "Integration of real traffic signs and rules",
+            "Spatial mapping for realistic environment interaction",
+            "Interactive tutorials and practice modes",
+            "Performance analytics and progress tracking"
+        ],
+        tags: ["Unity", "HoloLens", "MRTK", "Mixed Reality"],
+        githubUrl: "https://github.com/Ahmadraza1514/Driving-Training",
+        liveUrl: "#",
+        videoUrl: "https://drive.google.com/file/d/1cHRkVd_oP1oczWyhPe7B73QqzecT7XZk/view?usp=drive_link",
+        images: [
+            "images/proj_1.jpg",
+            "images/proj_1b.jpg",
+        ]
+    },
+    "vr-video-player": {
+        title: "VR Video Player",
+        subtitle: "VR video player application for WebGL using Unity and C#",
+        description: "A virtual reality video player designed for WebGL platform...",
+        features: [
+            "360-degree video playback support",
+            "Customizable virtual cinema environment",
+            "Intuitive VR controls and UI",
+            "WebGL compatibility",
+            "Multi-format video support"
+        ],
+        tags: ["Unity", "WebGL", "VR", "C#"],
+        githubUrl: "https://github.com/Ahmadraza1514/Vr-Video-Player",
+        liveUrl: "#",
+        videoUrl: "https://drive.google.com/file/d/15KbWDPfWEHvLRZXfwJB3yUbl-AsvyxV1/view?usp=drive_link",
+        images: [
+            "images/proj_2.jpg",
+            "images/proj_2b.jpg",
+        ]
+    },
+    "ar-drawing": {
+        title: "AR Drawing App",
+        subtitle: "Augmented reality drawing application for creating 3D digital artwork",
+        description: "An innovative augmented reality application that allows users to create and interact with digital artwork...",
+        features: [
+            "3D drawing in augmented reality",
+            "Multiple brush types and colors",
+            "Real-time environment tracking",
+            "Save and share artwork",
+            "ARCore and AR Foundation support"
+        ],
+        tags: ["Unity", "AR Foundation", "Mobile", "ARCore"],
+        githubUrl: "https://github.com/Ahmadraza1514/AR-Drawing",
+        liveUrl: "#",
+        videoUrl: "https://drive.google.com/file/d/1WUdbxTuxTsICZuiGhH6pnYXiMgTEImyu/view?usp=drive_link",
+        images: [
+            "images/proj_3.jpg",
+        ]
+    },
+    "falcon-strike": {
+        title: "Falcon Strike",
+        subtitle: "Game project with AWS S3 integration and ScriptableObjects",
+        description: "Falcon Strike is an action game that integrates UI systems with AWS S3 Bucket...",
+        features: [
+            "AWS S3 integration for dynamic content",
+            "ScriptableObjects for level design",
+            "Modular UI system",
+            "Performance optimization techniques",
+            "Cloud save functionality"
+        ],
+        tags: ["Unity", "AWS", "Game Design", "C#"],
+        githubUrl: "https://github.com/Ahmadraza1514/Falcon-Strike/tree/main",
+        liveUrl: "#",
+        videoUrl: "https://drive.google.com/file/d/1nG3JHgp8yJhBl6UDDHbNpWKx_YpbOrXK/view?usp=drive_link",
+        images: [
+            "images/proj_4.jpg",
+        ]
+    },
+    "ml-unity": {
+        title: "Poker♡Poker",
+        subtitle: "Multiplayer Card Game",
+        description: "Poker♡Poker is an exhilarating multiplayer, multitable Texas Hold'em poker game...",
+        features: [
+            "Multiplayer Game",
+            "FireBase Integration",
+            "Custom Backend on Node js"
+        ],
+        tags: ["Unity", "FireBase", "Optimization", "C#"],
+        githubUrl: "https://github.com/Ahmadraza1514/Machine-Learning-Unity",
+        liveUrl: "#",
+        videoUrl: "https://drive.google.com/file/d/1RgZ0BQrAb8M4PYGLgTtYSeHW5UkeqzYr/view?usp=drive_link",
+        images: [
+            "images/proj_5.jpg",
+        ]
+    },
+    "ar-furniture": {
+        title: "Drone Strike",
+        subtitle: "Multiplayer Card Game",
+        description: "Drone Strike is an action game that integrates UI systems with AWS S3 Bucket...",
+        features: [
+            "AWS S3 integration for dynamic content",
+            "ScriptableObjects for level design",
+            "Modular UI system",
+            "Performance optimization techniques",
+            "Cloud save functionality"
+        ],
+        tags: ["Unity", "S3 Bucket", "Design", "Optimization"],
+        githubUrl: "https://github.com/Ahmadraza1514/AR-Furniture",
+        liveUrl: "#",
+        videoUrl: "https://drive.google.com/file/d/1JlzOAxmDG6e3tz1MzDeRhOvE0YXa_DUS/view?usp=drive_link",
+        images: [
+            "images/proj_6.png",
+        ]
+    },
+    "vr-escape": {
+        title: "Meta Clash",
+        subtitle: "Meta Clash Build / Fight ",
+        description: "Meta Clash is an offline strategy game where players must build a community...",
+        features: [
+            "Build a community",
+            "Fill up storages",
+            "Train troops",
+            "Raid other players’ villages for loot",
+            "Engaging storyline with multiple endings"
+        ],
+        tags: ["Unity", "C#", "Playfab"],
+        githubUrl: "https://github.com/Ahmadraza1514/VR-Escape-Room",
+        liveUrl: "#",
+        videoUrl: "https://drive.google.com/file/d/1RVQaroVxvqtGrRWTMhylmScnYmteYeSb/view?usp=drive_link",
+        images: [
+            "images/proj_7.jpg",
+        ]
+    },
+    "multiplayer-racing": {
+        title: "Bad Biker",
+        subtitle: "Online multiplayer racing game with Photon Unity Networking",
+        description: "Welcome to BAD BIKER, a thrilling 1v1 multiplayer game...",
+        features: [
+            "Real-time multiplayer synchronization",
+            "Customizable vehicles and tracks",
+            "Player ranking and matchmaking system",
+            "Cross-platform compatibility"
+        ],
+        tags: ["Unity", "Fusion", "Multiplayer", "Racing"],
+        githubUrl: "https://github.com/Ahmadraza1514/Multiplayer-Racing",
+        liveUrl: "#",
+        videoUrl: "https://drive.google.com/file/d/1wET4jjSv1nj20KTqxffWPQISmijowIdP/view?usp=drive_link",
+        images: [
+            "images/proj_8.jpg",
+        ]
+    }
+};
+
 
         // Initialize AOS animation
         AOS.init({
@@ -2129,57 +2161,92 @@
             }
         });
 
-        // Function to open project modal with data
         function openProjectModal(projectId) {
-            const project = projects[projectId];
-            if (!project) return;
+    const project = projects[projectId];
+    if (!project) return;
 
-            // Set modal content
-            document.getElementById('modalProjectTitle').textContent = project.title;
-            document.getElementById('modalProjectSubtitle').textContent = project.subtitle;
-            document.getElementById('modalProjectDescription').textContent = project.description;
-            
-            // Set tags
-            const tagsContainer = document.getElementById('modalProjectTags');
-            tagsContainer.innerHTML = '';
-            project.tags.forEach(tag => {
-                const tagElement = document.createElement('span');
-                tagElement.className = 'project-detail-tag';
-                tagElement.textContent = tag;
-                tagsContainer.appendChild(tagElement);
-            });
-            
-            // Set features
-            const featuresContainer = document.getElementById('modalProjectFeatures');
-            featuresContainer.innerHTML = '';
-            project.features.forEach(feature => {
-                const featureElement = document.createElement('li');
-                featureElement.textContent = feature;
-                featuresContainer.appendChild(featureElement);
-            });
-            
-            // Set links
-            document.getElementById('modalProjectGithub').href = project.githubUrl;
-            document.getElementById('modalProjectLive').href = project.liveUrl;
-            
-            // Set video
-            const videoElement = document.getElementById('modalProjectVideo');
-            videoElement.src = project.videoUrl;
-            
-            // Set images
-            const imagesContainer = document.getElementById('modalProjectImages');
-            imagesContainer.innerHTML = '';
-            project.images.forEach(image => {
-                const imgElement = document.createElement('img');
-                imgElement.className = 'project-detail-image';
-                imgElement.src = image;
-                imgElement.alt = project.title;
-                imagesContainer.appendChild(imgElement);
-            });
-            
-            // Show modal
-            modal.style.display = 'block';
+    // Set modal content
+    document.getElementById('modalProjectTitle').textContent = project.title;
+    document.getElementById('modalProjectSubtitle').textContent = project.subtitle;
+    document.getElementById('modalProjectDescription').textContent = project.description;
+
+    // Set tags
+    const tagsContainer = document.getElementById('modalProjectTags');
+    tagsContainer.innerHTML = '';
+    project.tags.forEach(tag => {
+        const tagElement = document.createElement('span');
+        tagElement.className = 'project-detail-tag';
+        tagElement.textContent = tag;
+        tagsContainer.appendChild(tagElement);
+    });
+
+    // Set features
+    const featuresContainer = document.getElementById('modalProjectFeatures');
+    featuresContainer.innerHTML = '';
+    project.features.forEach(feature => {
+        const featureElement = document.createElement('li');
+        featureElement.textContent = feature;
+        featuresContainer.appendChild(featureElement);
+    });
+
+    // Set links
+    document.getElementById('modalProjectGithub').href = project.githubUrl || '#';
+    document.getElementById('modalProjectLive').href = project.liveUrl || '#';
+
+    // Set placeholder image
+    const placeholderElement = document.getElementById('modalProjectPlaceholder');
+    if (project.images && project.images.length > 0) {
+        placeholderElement.src = project.images[0];
+    }
+
+    // Set images
+    const imagesContainer = document.getElementById('modalProjectImages');
+    imagesContainer.innerHTML = '';
+    if (project.images && project.images.length > 1) {
+        for (let i = 1; i < project.images.length; i++) {
+            const imgElement = document.createElement('img');
+            imgElement.className = 'project-detail-image';
+            imgElement.src = project.images[i];
+            imgElement.alt = project.title;
+            imagesContainer.appendChild(imgElement);
         }
+    }
+
+    // Embed video in modal
+const videoLinkElement = document.getElementById('modalProjectVideoLink');
+videoLinkElement.style.display = 'none'; // Hide the old link
+let videoContainer = document.getElementById('modalProjectVideoContainer');
+
+if (!videoContainer) {
+    videoContainer = document.createElement('div');
+    videoContainer.id = 'modalProjectVideoContainer';
+    videoContainer.className = 'modal-video-container';
+    placeholderElement.parentNode.appendChild(videoContainer);
+}
+videoContainer.innerHTML = ''; // Clear previous video
+
+// Check if Google Drive link or direct mp4
+if (project.videoUrl.includes('drive.google.com')) {
+    const fileId = project.videoUrl.match(/\/d\/(.*?)\//)[1];
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+    iframe.width = '530';   // full width
+    iframe.height = '500';    // increased height
+    iframe.allow = 'autoplay';
+    iframe.frameBorder = '0';
+    videoContainer.appendChild(iframe);
+} else {
+    const video = document.createElement('video');
+    video.src = project.videoUrl;
+    video.controls = true;
+    video.width = '530';    // full width
+    video.height = '500';     // increased height
+    videoContainer.appendChild(video);
+}
+
+// Show modal
+modal.style.display = 'block';
+}
     </script>
 </body>
 </html>
