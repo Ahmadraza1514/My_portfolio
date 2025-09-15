@@ -4,11 +4,8 @@
     <title>Ahmad Raza | AR/VR Developer Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Professional portfolio of Ahmad Raza - AR/VR and Game Developer with 3+ years experience in Unity">
+    <meta name="description" content="Professional portfolio of Ahmad Raza - AR/VR and Game Developer with 4 years experience in Unity">
     
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     
@@ -210,7 +207,7 @@
       /* Hero Section */
       section {
         min-height: 100vh;
-        padding: 8rem 10% 2rem; /* Reduced top padding to move content up */
+        padding: 8rem 10% 2rem;
         position: relative;
         overflow: hidden;
       }
@@ -244,7 +241,7 @@
         background-clip: text;
         color: transparent;
         text-shadow: 0 0 15px rgba(255, 137, 6, 0.3);
-        margin-top: -30px; /* Added to move the heading up */
+        margin-top: -30px;
       }
 
       .hero h1 span {
@@ -599,6 +596,7 @@
       .timeline-title {
         font-size: 22px;
         margin-bottom: 10px;
+        position: relative;
       }
 
       .timeline-company {
@@ -652,8 +650,8 @@
 
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
         margin-top: 50px;
       }
 
@@ -697,7 +695,7 @@
         align-items: center;
         flex-direction: column;
         text-align: center;
-        padding: 0 40px;
+        padding: 0 20px;
         transform: translateY(100%);
         transition: all 0.5s ease;
         opacity: 0.9;
@@ -708,15 +706,15 @@
       }
 
       .project-title {
-        font-size: 28px;
-        margin-bottom: 15px;
+        font-size: 18px;
+        margin-bottom: 12px;
         color: var(--primary-color);
         text-shadow: 0 0 5px rgba(0,0,0,0.3);
       }
 
       .project-description {
-        font-size: 16px;
-        margin-bottom: 25px;
+        font-size: 12px;
+        margin-bottom: 12px;
         color: var(--primary-color);
         line-height: 1.6;
       }
@@ -724,17 +722,16 @@
       .project-tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 2px;
         justify-content: center;
         margin-bottom: 20px;
-        flex-wrap: wrap;
       }
 
       .project-tag {
         padding: 5px 15px;
         background: rgba(15, 14, 23, 0.7);
         border-radius: 50px;
-        font-size: 12px;
+        font-size: 8px;
         font-weight: 600;
         color: var(--accent-color);
         text-transform: uppercase;
@@ -805,6 +802,7 @@
         display: inline-block;
         transition: all 0.3s ease;
         box-shadow: var(--neon-glow);
+        margin-top: 20px;
       }
 
       .github-button:hover {
@@ -827,7 +825,7 @@
 
       .contact-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
         margin-top: 50px;
       }
@@ -871,6 +869,7 @@
         color: var(--accent-color);
         text-decoration: none;
         transition: all 0.3s ease;
+        word-break: break-all;
       }
 
       .contact-card a:hover {
@@ -964,422 +963,535 @@
         font-size: 14px;
       }
 
-      /* Project Detail Modal */
+      /* Project Detail Modal - Responsive Updates */
       .project-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        z-index: 2000;
-        overflow-y: auto;
-        padding: 20px;
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.9);
+          z-index: 2000;
+          overflow-y: auto;
+          padding: 20px;
+          box-sizing: border-box;
       }
 
       .modal-content {
-        background-color: var(--secondary-color);
-        margin: 40px auto;
-        max-width: 1200px;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--neon-glow);
-        position: relative;
+          background-color: var(--secondary-color);
+          margin: 40px auto;
+          max-width: 1200px;
+          width: 90%;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: var(--neon-glow);
+          position: relative;
       }
 
       .close-modal {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: var(--text-color);
-        font-size: 30px;
-        cursor: pointer;
-        z-index: 2001;
-        background: var(--accent-color);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: var(--neon-glow);
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          color: var(--text-color);
+          font-size: 24px;
+          cursor: pointer;
+          z-index: 2001;
+          background: var(--accent-color);
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: var(--neon-glow);
       }
 
       .project-detail-container {
-        display: flex;
-        flex-direction: column;
+          display: flex;
+          flex-direction: column;
       }
 
       .project-detail-header {
-        padding: 40px;
-        background: var(--primary-color);
+          padding: 30px;
+          background: var(--primary-color);
       }
 
       .project-detail-title {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-        color: var(--accent-color);
+          font-size: 2rem;
+          margin-bottom: 10px;
+          color: var(--accent-color);
+          line-height: 1.2;
       }
 
       .project-detail-subtitle {
-        color: var(--light-text);
-        margin-bottom: 20px;
-        font-size: 1.2rem;
+          color: var(--light-text);
+          margin-bottom: 15px;
+          font-size: 1rem;
       }
 
       .project-detail-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 15px;
       }
 
       .project-detail-tag {
-        padding: 8px 15px;
-        background: var(--accent-color);
-        color: #000;
-        border-radius: 50px;
-        font-size: 14px;
-        font-weight: 600;
+          padding: 6px 12px;
+          background: var(--accent-color);
+          color: #000;
+          border-radius: 50px;
+          font-size: 12px;
+          font-weight: 600;
       }
 
       .project-detail-body {
-        display: flex;
-        flex-wrap: wrap;
+          display: flex;
+          flex-wrap: wrap;
       }
 
       .project-detail-media {
-        flex: 1;
-        min-width: 300px;
-        padding: 20px;
+          flex: 1;
+          min-width: 300px;
+          padding: 20px;
+          box-sizing: border-box;
       }
 
-      .video-placeholder {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        position: relative;
-        background: var(--primary-color);
-        min-height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
+      .modal-video-container {
+          width: 100%;
+          margin-bottom: 20px;
+          position: relative;
+          overflow: hidden;
+          padding-top: 56.25%; /* 16:9 Aspect Ratio */
+          border-radius: 10px;
+          background: var(--primary-color);
       }
 
-      .video-placeholder-img {
-        width: 100%;
-        border-radius: 10px;
-        opacity: 0.7;
+      .modal-video-container iframe,
+      .modal-video-container video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: 10px;
       }
 
       .view-video-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 25px;
-        background: var(--accent-color);
-        color: #000;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 25px;
+          background: var(--accent-color);
+          color: #000;
+          text-decoration: none;
+          border-radius: 50px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          margin-top: 15px;
       }
 
       .view-video-btn:hover {
-        background: #fff;
-        transform: translateY(-3px);
+          background: #fff;
+          transform: translateY(-3px);
       }
 
       .project-detail-images {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 15px;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          gap: 15px;
+          margin-top: 20px;
       }
 
       .project-detail-image {
-        width: 100%;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
-        cursor: pointer;
+          width: 100%;
+          border-radius: 10px;
+          transition: transform 0.3s ease;
+          cursor: pointer;
+          aspect-ratio: 16/9;
+          object-fit: cover;
       }
 
       .project-detail-image:hover {
-        transform: scale(1.05);
+          transform: scale(1.05);
       }
 
       .project-detail-info {
-        flex: 1;
-        min-width: 300px;
-        padding: 20px;
+          flex: 1;
+          min-width: 300px;
+          padding: 20px;
+          box-sizing: border-box;
       }
 
       .project-detail-description {
-        margin-bottom: 30px;
-        line-height: 1.8;
-        color: var(--light-text);
+          margin-bottom: 25px;
+          line-height: 1.8;
+          color: var(--light-text);
       }
 
       .project-detail-features {
-        margin-bottom: 30px;
+          margin-bottom: 25px;
       }
 
       .project-detail-features h3 {
-        color: var(--accent-color);
-        margin-bottom: 15px;
-        font-size: 1.5rem;
+          color: var(--accent-color);
+          margin-bottom: 15px;
+          font-size: 1.3rem;
       }
 
       .feature-list {
-        list-style-type: none;
+          list-style-type: none;
+          padding-left: 0;
       }
 
       .feature-list li {
-        margin-bottom: 10px;
-        padding-left: 25px;
-        position: relative;
-        color: var(--light-text);
+          margin-bottom: 10px;
+          padding-left: 25px;
+          position: relative;
+          color: var(--light-text);
       }
 
       .feature-list li:before {
-        content: "✓";
-        color: var(--accent-color);
-        position: absolute;
-        left: 0;
-        font-weight: bold;
+          content: "✓";
+          color: var(--accent-color);
+          position: absolute;
+          left: 0;
+          font-weight: bold;
       }
 
       .project-detail-links {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
+          display: flex;
+          gap: 15px;
+          flex-wrap: wrap;
       }
 
       .project-detail-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 25px;
-        background: var(--accent-color);
-        color: #000;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 20px;
+          background: var(--accent-color);
+          color: #000;
+          text-decoration: none;
+          border-radius: 50px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          font-size: 14px;
       }
 
       .project-detail-link:hover {
-        background: #fff;
-        transform: translateY(-3px);
+          background: #fff;
+          transform: translateY(-3px);
+      }
+
+      /* Responsive adjustments for the modal */
+      @media (max-width: 992px) {
+          .project-detail-body {
+              flex-direction: column;
+          }
+          
+          .project-detail-header {
+              padding: 20px;
+          }
+          
+          .project-detail-title {
+              font-size: 1.8rem;
+          }
+          
+          .modal-content {
+              width: 95%;
+              margin: 20px auto;
+          }
+      }
+
+      @media (max-width: 768px) {
+          .project-modal {
+              padding: 10px;
+          }
+          
+          .project-detail-header {
+              padding: 15px;
+          }
+          
+          .project-detail-title {
+              font-size: 1.5rem;
+          }
+          
+          .project-detail-subtitle {
+              font-size: 0.9rem;
+          }
+          
+          .project-detail-media,
+          .project-detail-info {
+              padding: 15px;
+          }
+          
+          .project-detail-images {
+              grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+              gap: 10px;
+          }
+          
+          .project-detail-tag {
+              font-size: 10px;
+              padding: 4px 10px;
+          }
+          
+          .project-detail-links {
+              flex-direction: column;
+          }
+          
+          .project-detail-link {
+              justify-content: center;
+          }
+          
+          .close-modal {
+              top: 10px;
+              right: 10px;
+              width: 30px;
+              height: 30px;
+              font-size: 18px;
+          }
+      }
+
+      @media (max-width: 576px) {
+          .project-detail-title {
+              font-size: 1.3rem;
+          }
+          
+          .project-detail-tags {
+              gap: 5px;
+          }
+          
+          .project-detail-tag {
+              padding: 3px 8px;
+              font-size: 9px;
+          }
+          
+          .project-detail-images {
+              grid-template-columns: repeat(2, 1fr);
+          }
+          
+          .modal-video-container {
+              padding-top: 75%; /* 4:3 Aspect Ratio for mobile */
+          }
       }
 
       /* Responsive Design */
       @media (max-width: 1200px) {
-        .profile-image {
-          width: 350px;
-          height: 350px;
-        }
+          .profile-image {
+              width: 350px;
+              height: 350px;
+          }
       }
 
       @media (max-width: 992px) {
-        .hero h1 {
-          font-size: 2.8rem;
-        }
-        
-        .about-container {
-          flex-direction: column;
-        }
-        
-        .timeline::before {
-          left: 31px;
-        }
-        
-        .timeline-item {
-          width: 100%;
-          padding-left: 70px;
-          padding-right: 25px;
-        }
-        
-        .timeline-item:nth-child(even) {
-          left: 0;
-        }
-        
-        .timeline-item:nth-child(odd)::after,
-        .timeline-item:nth-child(even)::after {
-          left: 21px;
-        }
-        
-        .project-detail-body {
-          flex-direction: column;
-        }
+          .hero h1 {
+              font-size: 2.8rem;
+          }
+          
+          .about-container {
+              flex-direction: column;
+          }
+          
+          .timeline::before {
+              left: 31px;
+          }
+          
+          .timeline-item {
+              width: 100%;
+              padding-left: 70px;
+              padding-right: 25px;
+          }
+          
+          .timeline-item:nth-child(even) {
+              left: 0;
+          }
+          
+          .timeline-item:nth-child(odd)::after,
+          .timeline-item:nth-child(even)::after {
+              left: 21px;
+          }
       }
 
       @media (max-width: 768px) {
-        .hamburger {
-          display: flex;
-          flex-direction: column;
-        }
+          .hamburger {
+              display: flex;
+              flex-direction: column;
+          }
 
-        .navbar {
-          position: fixed;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100vh;
-          background: rgba(15, 14, 23, 0.95);
-          backdrop-filter: blur(10px);
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          z-index: 1000;
-        }
+          .navbar {
+              position: fixed;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100vh;
+              background: rgba(15, 14, 23, 0.95);
+              backdrop-filter: blur(10px);
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+              z-index: 1000;
+          }
 
-        .navbar.active {
-          left: 0;
-        }
+          .navbar.active {
+              left: 0;
+          }
 
-        .navbar a {
-          margin: 15px 0;
-          font-size: 24px;
-        }
+          .navbar a {
+              margin: 15px 0;
+              font-size: 24px;
+          }
 
-        .hero {
-          flex-direction: column;
-          text-align: center;
-          padding-top: 100px;
-        }
+          .hero {
+              flex-direction: column;
+              text-align: center;
+              padding-top: 100px;
+          }
 
-        .hero-text {
-          margin: 0 auto;
-        }
+          .hero-text {
+              margin: 0 auto;
+          }
 
-        .hero-buttons {
-          justify-content: center;
-        }
+          .hero-buttons {
+              justify-content: center;
+          }
 
-        .profile-image {
-          position: relative;
-          right: auto;
-          top: auto;
-          transform: none;
-          margin: 40px auto 0;
-          width: 300px;
-          height: 300px;
-        }
+          .profile-image {
+              position: relative;
+              right: auto;
+              top: auto;
+              transform: none;
+              margin: 40px auto 0;
+              width: 300px;
+              height: 300px;
+          }
 
-        .projects-grid {
-          grid-template-columns: 1fr;
-        }
-        
-        .project-detail-header {
-          padding: 20px;
-        }
-        
-        .project-detail-title {
-          font-size: 2rem;
-        }
+          .projects-grid {
+              grid-template-columns: 1fr;
+          }
+          
+          .project-overlay {
+              padding: 0 20px;
+          }
+          
+          .project-title {
+              font-size: 22px;
+          }
+          
+          .project-description {
+              font-size: 14px;
+          }
       }
 
       @media (max-width: 576px) {
-        .hero h1 {
-          font-size: 2.2rem;
-        }
+          .hero h1 {
+              font-size: 2.2rem;
+          }
 
-        .hero h2 {
-          font-size: 1.2rem;
-        }
+          .hero h2 {
+              font-size: 1.2rem;
+          }
 
-        .hero-buttons {
-          flex-direction: column;
-          gap: 15px;
-        }
+          .hero-buttons {
+              flex-direction: column;
+              gap: 15px;
+          }
 
-        .btn {
-          width: 100%;
-        }
+          .btn {
+              width: 100%;
+          }
 
-        .section-title {
-          font-size: 2.2rem;
-        }
+          .section-title {
+              font-size: 2.2rem;
+          }
 
-        .about-info {
-          grid-template-columns: 1fr;
-        }
-        
-        .project-detail-links {
-          flex-direction: column;
-        }
-        
-        .project-detail-link {
-          justify-content: center;
-        }
+          .about-info {
+              grid-template-columns: 1fr;
+          }
+          
+          .project-tags {
+              flex-wrap: wrap;
+              justify-content: center;
+          }
+          
+          .project-tag {
+              font-size: 10px;
+              padding: 4px 10px;
+          }
+          
+          .projects-grid {
+              gap: 20px;
+          }
+          
+          .project-card {
+              aspect-ratio: 4/3;
+          }
       }
 
       /* Animation */
       @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
+          0% {
+              transform: translateY(0px);
+          }
+          50% {
+              transform: translateY(-20px);
+          }
+          100% {
+              transform: translateY(0px);
+          }
       }
 
       .floating {
-        animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
       }
 
       /* Custom Cursor */
       .cursor {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: var(--accent-color);
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        mix-blend-mode: difference;
-        z-index: 1000;
-        transition: transform 0.1s;
-        box-shadow: var(--neon-glow);
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: var(--accent-color);
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+          mix-blend-mode: difference;
+          z-index: 1000;
+          transition: transform 0.1s;
+          box-shadow: var(--neon-glow);
       }
 
       .cursor-follower {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid var(--accent-color);
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        z-index: 999;
-        transition: transform 0.4s, width 0.3s, height 0.3s;
-        box-shadow: var(--neon-glow);
+          position: fixed;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid var(--accent-color);
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+          z-index: 999;
+          transition: transform 0.4s, width 0.3s, height 0.3s;
+          box-shadow: var(--neon-glow);
       }
 
       /* Typing Animation */
       #typing-text {
-        border-right: 3px solid var(--accent-color);
-        white-space: nowrap;
-        overflow: hidden;
-        display: inline-block;
+          border-right: 3px solid var(--accent-color);
+          white-space: nowrap;
+          overflow: hidden;
+          display: inline-block;
       }
 
       @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
+          from { width: 0 }
+          to { width: 100% }
       }
 
       @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: var(--accent-color) }
+          from, to { border-color: transparent }
+          50% { border-color: var(--accent-color) }
       }
     </style>
 </head>
@@ -1409,14 +1521,14 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+   <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-pattern"></div>
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Hi, I'm <span>Muhammad Ahmad Raza</span></h1>
                 <h2 id="typing-text">I Build Immersive AR/VR Experiences</h2>
-                <p>Professional Unity Game Developer with 3+ years of experience creating immersive, high-performance games for mobile, PC, and VR platforms.</p>
+                <p>Professional Unity Game Developer with 4 years of experience creating immersive, high-performance games for mobile, PC, and VR platforms.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Hire Me</a>
                     <a href="RESUME.pdf" class="btn btn-outline">Download CV</a>
@@ -1805,12 +1917,7 @@
                 </div>
                 <div class="project-detail-body">
                     <div class="project-detail-media">
-                        <div class="video-placeholder">
-                            <img id="modalProjectPlaceholder" class="video-placeholder-img" src="" alt="Project Video">
-                            <a href="#" id="modalProjectVideoLink" target="_blank" class="view-video-btn">
-                                <i class="fas fa-play-circle"></i> View Video on Drive
-                            </a>
-                        </div>
+                        <div class="modal-video-container" id="modalProjectVideoContainer"></div>
                         <div class="project-detail-images" id="modalProjectImages"></div>
                     </div>
                     <div class="project-detail-info">
@@ -1838,161 +1945,115 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
-       // Project data
-const projects = {
-    "driving-training": {
+        // Project data
+        const projects = {
+      "driving-training": {
         title: "Driving Training Tutorial",
         subtitle: "Immersive mixed reality driving lessons app for HoloLens",
         description: "This project is an innovative mixed reality application designed for HoloLens that provides immersive driving lessons...",
         features: [
-            "Mixed reality driving simulation with HoloLens",
-            "Integration of real traffic signs and rules",
-            "Spatial mapping for realistic environment interaction",
-            "Interactive tutorials and practice modes",
-            "Performance analytics and progress tracking"
+          "Mixed reality driving simulation with HoloLens",
+          "Integration of real traffic signs and rules",
+          "Spatial mapping for realistic environment interaction",
+          "Interactive tutorials and practice modes",
+          "Performance analytics and progress tracking"
         ],
-        tags: ["Unity", "HoloLens", "MRTK", "Mixed Reality"],
+        tags: ["Unity","HoloLens","MRTK","Mixed Reality"],
         githubUrl: "https://github.com/Ahmadraza1514/Driving-Training",
         liveUrl: "#",
         videoUrl: "https://drive.google.com/file/d/1cHRkVd_oP1oczWyhPe7B73QqzecT7XZk/view?usp=drive_link",
-        images: [
-            "images/proj_1.jpg",
-            "images/proj_1b.jpg",
-        ]
-    },
-    "vr-video-player": {
+        images: ["images/proj_1.jpg","images/proj_1b.jpg"]
+      },
+      "vr-video-player": {
         title: "VR Video Player",
         subtitle: "VR video player application for WebGL using Unity and C#",
         description: "A virtual reality video player designed for WebGL platform...",
         features: [
-            "360-degree video playback support",
-            "Customizable virtual cinema environment",
-            "Intuitive VR controls and UI",
-            "WebGL compatibility",
-            "Multi-format video support"
+          "360-degree video playback support",
+          "Customizable virtual cinema environment",
+          "Intuitive VR controls and UI",
+          "WebGL compatibility",
+          "Multi-format video support"
         ],
-        tags: ["Unity", "WebGL", "VR", "C#"],
+        tags: ["Unity","WebGL","VR","C#"],
         githubUrl: "https://github.com/Ahmadraza1514/Vr-Video-Player",
         liveUrl: "https://vrplayerdemo.netlify.app/",
         videoUrl: "https://drive.google.com/file/d/15KbWDPfWEHvLRZXfwJB3yUbl-AsvyxV1/view?usp=drive_link",
-        images: [
-            "images/proj_2.jpg",
-            "images/proj_2b.jpg",
-        ]
-    },
-    "ar-drawing": {
+        images: ["images/proj_2.jpg","images/proj_2b.jpg"]
+      },
+      "ar-drawing": {
         title: "AR Drawing App",
         subtitle: "Augmented reality drawing application for creating 3D digital artwork",
         description: "An innovative augmented reality application that allows users to create and interact with digital artwork...",
         features: [
-            "3D drawing in augmented reality",
-            "Multiple brush types and colors",
-            "Real-time environment tracking",
-            "Save and share artwork",
-            "ARCore and AR Foundation support"
+          "3D drawing in augmented reality","Multiple brush types and colors","Real-time environment tracking","Save and share artwork","ARCore and AR Foundation support"
         ],
-        tags: ["Unity", "AR Foundation", "Mobile", "ARCore"],
+        tags: ["Unity","AR Foundation","Mobile","ARCore"],
         githubUrl: "https://github.com/Ahmadraza1514/AR-Drawing",
         liveUrl: "#",
         videoUrl: "https://drive.google.com/file/d/1WUdbxTuxTsICZuiGhH6pnYXiMgTEImyu/view?usp=drive_link",
-        images: [
-            "images/proj_3.jpg",
-        ]
-    },
-    "falcon-strike": {
+        images: ["images/proj_3.jpg"]
+      },
+      "falcon-strike": {
         title: "Falcon Strike",
         subtitle: "Game project with AWS S3 integration and ScriptableObjects",
         description: "Falcon Strike is an action game that integrates UI systems with AWS S3 Bucket...",
         features: [
-            "AWS S3 integration for dynamic content",
-            "ScriptableObjects for level design",
-            "Modular UI system",
-            "Performance optimization techniques",
-            "Cloud save functionality"
+          "AWS S3 integration for dynamic content","ScriptableObjects for level design","Modular UI system","Performance optimization techniques","Cloud save functionality"
         ],
-        tags: ["Unity", "AWS", "Game Design", "C#"],
+        tags: ["Unity","AWS","Game Design","C#"],
         githubUrl: "https://github.com/Ahmadraza1514/Falcon-Strike/tree/main",
         liveUrl: "#",
         videoUrl: "https://drive.google.com/file/d/1nG3JHgp8yJhBl6UDDHbNpWKx_YpbOrXK/view?usp=drive_link",
-        images: [
-            "images/proj_4.jpg",
-        ]
-    },
-    "ml-unity": {
+        images: ["images/proj_4.jpg"]
+      },
+      "ml-unity": {
         title: "Poker♡Poker",
         subtitle: "Multiplayer Card Game",
         description: "Poker♡Poker is an exhilarating multiplayer, multitable Texas Hold'em poker game...",
-        features: [
-            "Multiplayer Game",
-            "FireBase Integration",
-            "Custom Backend on Node js"
-        ],
-        tags: ["Unity", "FireBase", "Optimization", "C#"],
+        features: ["Multiplayer Game","FireBase Integration","Custom Backend on Node js"],
+        tags: ["Unity","FireBase","Optimization","C#"],
         githubUrl: "https://github.com/Ahmadraza1514/Machine-Learning-Unity",
         liveUrl: "#",
         videoUrl: "https://drive.google.com/file/d/1RgZ0BQrAb8M4PYGLgTtYSeHW5UkeqzYr/view?usp=drive_link",
-        images: [
-            "images/proj_5.jpg",
-        ]
-    },
-    "ar-furniture": {
+        images: ["images/proj_5.jpg"]
+      },
+      "ar-furniture": {
         title: "Drone Strike",
         subtitle: "Multiplayer Card Game",
         description: "Drone Strike is an action game that integrates UI systems with AWS S3 Bucket...",
         features: [
-            "AWS S3 integration for dynamic content",
-            "ScriptableObjects for level design",
-            "Modular UI system",
-            "Performance optimization techniques",
-            "Cloud save functionality"
+          "AWS S3 integration for dynamic content","ScriptableObjects for level design","Modular UI system","Performance optimization techniques","Cloud save functionality"
         ],
-        tags: ["Unity", "S3 Bucket", "Design", "Optimization"],
+        tags: ["Unity","S3 Bucket","Design","Optimization"],
         githubUrl: "https://github.com/Ahmadraza1514/AR-Furniture",
         liveUrl: "#",
         videoUrl: "https://drive.google.com/file/d/1JlzOAxmDG6e3tz1MzDeRhOvE0YXa_DUS/view?usp=drive_link",
-        images: [
-            "images/proj_6.png",
-        ]
-    },
-    "vr-escape": {
+        images: ["images/proj_6.png"]
+      },
+      "vr-escape": {
         title: "Meta Clash",
         subtitle: "Meta Clash Build / Fight ",
         description: "Meta Clash is an offline strategy game where players must build a community...",
-        features: [
-            "Build a community",
-            "Fill up storages",
-            "Train troops",
-            "Raid other players’ villages for loot",
-            "Engaging storyline with multiple endings"
-        ],
-        tags: ["Unity", "C#", "Playfab"],
+        features: ["Build a community","Fill up storages","Train troops","Raid other players’ villages for loot","Engaging storyline"],
+        tags: ["Unity","C#","Playfab"],
         githubUrl: "https://github.com/Ahmadraza1514/VR-Escape-Room",
         liveUrl: "#",
         videoUrl: "https://drive.google.com/file/d/1RVQaroVxvqtGrRWTMhylmScnYmteYeSb/view?usp=drive_link",
-        images: [
-            "images/proj_7.jpg",
-        ]
-    },
-    "multiplayer-racing": {
+        images: ["images/proj_7.jpg"]
+      },
+      "multiplayer-racing": {
         title: "Bad Biker",
         subtitle: "Online multiplayer racing game with Photon Unity Networking",
         description: "Welcome to BAD BIKER, a thrilling 1v1 multiplayer game...",
-        features: [
-            "Real-time multiplayer synchronization",
-            "Customizable vehicles and tracks",
-            "Player ranking and matchmaking system",
-            "Cross-platform compatibility"
-        ],
-        tags: ["Unity", "Fusion", "Multiplayer", "Racing"],
+        features: ["Real-time multiplayer synchronization","Customizable vehicles and tracks","Player ranking and matchmaking","Cross-platform compatibility"],
+        tags: ["Unity","Fusion","Multiplayer","Racing"],
         githubUrl: "https://github.com/Ahmadraza1514/Multiplayer-Racing",
         liveUrl: "#",
         videoUrl: "https://drive.google.com/file/d/1wET4jjSv1nj20KTqxffWPQISmijowIdP/view?usp=drive_link",
-        images: [
-            "images/proj_8.jpg",
-        ]
-    }
-};
-
+        images: ["images/proj_8.jpg"]
+      }
+    };
 
         // Initialize AOS animation
         AOS.init({
@@ -2162,91 +2223,86 @@ const projects = {
         });
 
         function openProjectModal(projectId) {
-    const project = projects[projectId];
-    if (!project) return;
+            const project = projects[projectId];
+            if (!project) return;
 
-    // Set modal content
-    document.getElementById('modalProjectTitle').textContent = project.title;
-    document.getElementById('modalProjectSubtitle').textContent = project.subtitle;
-    document.getElementById('modalProjectDescription').textContent = project.description;
+            // Set modal content
+            document.getElementById('modalProjectTitle').textContent = project.title;
+            document.getElementById('modalProjectSubtitle').textContent = project.subtitle;
+            document.getElementById('modalProjectDescription').textContent = project.description;
 
-    // Set tags
-    const tagsContainer = document.getElementById('modalProjectTags');
-    tagsContainer.innerHTML = '';
-    project.tags.forEach(tag => {
-        const tagElement = document.createElement('span');
-        tagElement.className = 'project-detail-tag';
-        tagElement.textContent = tag;
-        tagsContainer.appendChild(tagElement);
-    });
+            // Set tags
+            const tagsContainer = document.getElementById('modalProjectTags');
+            tagsContainer.innerHTML = '';
+            project.tags.forEach(tag => {
+                const tagElement = document.createElement('span');
+                tagElement.className = 'project-detail-tag';
+                tagElement.textContent = tag;
+                tagsContainer.appendChild(tagElement);
+            });
 
-    // Set features
-    const featuresContainer = document.getElementById('modalProjectFeatures');
-    featuresContainer.innerHTML = '';
-    project.features.forEach(feature => {
-        const featureElement = document.createElement('li');
-        featureElement.textContent = feature;
-        featuresContainer.appendChild(featureElement);
-    });
+            // Set features
+            const featuresContainer = document.getElementById('modalProjectFeatures');
+            featuresContainer.innerHTML = '';
+            project.features.forEach(feature => {
+                const featureElement = document.createElement('li');
+                featureElement.textContent = feature;
+                featuresContainer.appendChild(featureElement);
+            });
 
-    // Set links
-    document.getElementById('modalProjectGithub').href = project.githubUrl || '#';
-    document.getElementById('modalProjectLive').href = project.liveUrl || '#';
+            // Set links
+            document.getElementById('modalProjectGithub').href = project.githubUrl || '#';
+            document.getElementById('modalProjectLive').href = project.liveUrl || '#';
 
-    // Set placeholder image
-    const placeholderElement = document.getElementById('modalProjectPlaceholder');
-    if (project.images && project.images.length > 0) {
-        placeholderElement.src = project.images[0];
-    }
+            // Set images
+            const imagesContainer = document.getElementById('modalProjectImages');
+            imagesContainer.innerHTML = '';
+            if (project.images && project.images.length > 0) {
+                project.images.forEach(image => {
+                    const imgElement = document.createElement('img');
+                    imgElement.className = 'project-detail-image';
+                    imgElement.src = image;
+                    imgElement.alt = project.title;
+                    imagesContainer.appendChild(imgElement);
+                });
+            }
 
-    // Set images
-    const imagesContainer = document.getElementById('modalProjectImages');
-    imagesContainer.innerHTML = '';
-    if (project.images && project.images.length > 1) {
-        for (let i = 1; i < project.images.length; i++) {
-            const imgElement = document.createElement('img');
-            imgElement.className = 'project-detail-image';
-            imgElement.src = project.images[i];
-            imgElement.alt = project.title;
-            imagesContainer.appendChild(imgElement);
+            // Create or update video container
+            let videoContainer = document.getElementById('modalProjectVideoContainer');
+            if (!videoContainer) {
+                videoContainer = document.createElement('div');
+                videoContainer.id = 'modalProjectVideoContainer';
+                videoContainer.className = 'modal-video-container';
+                
+                // Find the media container and insert the video at the top
+                const mediaContainer = document.querySelector('.project-detail-media');
+                mediaContainer.insertBefore(videoContainer, mediaContainer.firstChild);
+            }
+            
+            videoContainer.innerHTML = ''; // Clear previous video
+
+            // Check if Google Drive link or direct mp4
+            if (project.videoUrl.includes('drive.google.com')) {
+                const fileId = project.videoUrl.match(/\/d\/([^\/]+)/)[1];
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+                iframe.allow = 'autoplay';
+                iframe.frameBorder = '0';
+                iframe.allowFullscreen = true;
+                videoContainer.appendChild(iframe);
+            } else if (project.videoUrl) {
+                const video = document.createElement('video');
+                video.src = project.videoUrl;
+                video.controls = true;
+                videoContainer.appendChild(video);
+            }
+
+            // Show modal
+            modal.style.display = 'block';
+            
+            // Scroll to top of modal
+            modal.scrollTop = 0;
         }
-    }
-
-    // Embed video in modal
-const videoLinkElement = document.getElementById('modalProjectVideoLink');
-videoLinkElement.style.display = 'none'; // Hide the old link
-let videoContainer = document.getElementById('modalProjectVideoContainer');
-
-if (!videoContainer) {
-    videoContainer = document.createElement('div');
-    videoContainer.id = 'modalProjectVideoContainer';
-    videoContainer.className = 'modal-video-container';
-    placeholderElement.parentNode.appendChild(videoContainer);
-}
-videoContainer.innerHTML = ''; // Clear previous video
-
-// Check if Google Drive link or direct mp4
-if (project.videoUrl.includes('drive.google.com')) {
-    const fileId = project.videoUrl.match(/\/d\/(.*?)\//)[1];
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
-    iframe.width = '530';   // full width
-    iframe.height = '500';    // increased height
-    iframe.allow = 'autoplay';
-    iframe.frameBorder = '0';
-    videoContainer.appendChild(iframe);
-} else {
-    const video = document.createElement('video');
-    video.src = project.videoUrl;
-    video.controls = true;
-    video.width = '530';    // full width
-    video.height = '500';     // increased height
-    videoContainer.appendChild(video);
-}
-
-// Show modal
-modal.style.display = 'block';
-}
     </script>
 </body>
 </html>
