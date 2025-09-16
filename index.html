@@ -356,6 +356,29 @@
         z-index: 1;
       }
 
+       @media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .profile-image {
+    order: -1; /* Image ko text ke upar le aayega */
+    position: relative;
+    top: unset;
+    right: unset;
+    transform: none;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-text {
+    margin-top: 10px;
+  }
+}
+
       /* About Section */
       .about-section {
         background-color: var(--secondary-color);
@@ -1521,27 +1544,32 @@
         </nav>
     </header>
 
-  <!-- Hero Section -->
+ <!-- Hero Section -->
 <section id="home" class="hero">
-    <div class="hero-pattern"></div>
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1>Hi, I'm <span>Muhammad Ahmad Raza</span></h1>
-            <h2 id="typing-text">Unity Developer | AR/VR Specialist | Cloud Enthusiast</h2>
-            <p>
-                Unity Game Developer with 4+ years of professional experience creating immersive AR/VR applications,
-                high-performance mobile and PC games, and interactive solutions. Currently expanding expertise in 
-                Cloud Computing to deliver scalable, next-gen digital experiences.
-            </p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Hire Me</a>
-                <a href="RESUME.pdf" class="btn btn-outline">Download CV</a>
-            </div>
-        </div>
-        <div class="profile-image floating">
-            <img src="ahmadpic.png" alt="Muhammad Ahmad Raza">
-        </div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    
+    <!-- Profile Image -->
+    <div class="profile-image floating">
+      <img src="ahmadpic.png" alt="Muhammad Ahmad Raza">
     </div>
+
+    <!-- Hero Text -->
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Muhammad Ahmad Raza</span></h1>
+      <h2 id="typing-text">Unity Developer | AR/VR Enthusiast | Cloud Learner</h2>
+      <p>
+        Unity Game Developer with 4+ years of professional experience creating immersive AR/VR applications,
+        high-performance mobile and PC games, and interactive solutions. Currently expanding expertise in 
+        Cloud Computing to deliver scalable, next-gen digital experiences.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Hire Me</a>
+        <a href="RESUME.pdf" class="btn btn-outline">Download CV</a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- About Section -->
@@ -1802,6 +1830,24 @@
                     </a>
                 </div>
             </div>
+             <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+            <img src="images/proj_9.png" alt="AR Navigation" class="project-image">
+            <div class="project-overlay">
+                <h3 class="project-title">AR Navigation</h3>
+                <p class="project-description">An AR-based navigation app with QR scanning, Firebase integration.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Unity</span>
+                    <span class="project-tag">C#</span>
+                    <span class="project-tag">AR Foundation</span>
+                    <span class="project-tag">Firebase</span>
+                    <span class="project-tag">Cloud</span>
+                </div>
+                <a href="#" class="project-link view-project" data-project-id="ar-navigation">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+
             
             <div class="project-card" data-aos="fade-up" data-aos-delay="900">
                 <img src="images/proj_8.jpg" alt="Multiplayer Racing" class="project-image">
@@ -2079,6 +2125,24 @@
     videoUrl: "https://drive.google.com/file/d/1RVQaroVxvqtGrRWTMhylmScnYmteYeSb/view?usp=drive_link",
     images: ["images/proj_7.jpg"]
   },
+   "ar-navigation": {
+  "title": "AR Navigation",
+  "subtitle": "Augmented Reality Wayfinding",
+  "description": "An AR-based indoor/outdoor navigation app that uses QR codes to load interactive maps and guide users with 3D markers. Built with Unity and Firebase to deliver scalable, cloud-connected navigation experiences.",
+  "features": [
+    "QR code scanning for map loading",
+    "Interactive 2D/3D navigation markers",
+    "Firebase integration for storing map data",
+    "User-friendly mobile AR interface",
+    "Scalable for campuses, offices, and public spaces"
+  ],
+  "tags": ["Unity","C#","AR Foundation","Firebase","Cloud"],
+  "githubUrl": "https://github.com/Ahmadraza1514/MetaClash",
+  "liveUrl": "#",
+  "videoUrl": "https://drive.google.com/file/d/1m4KtYz8a7ex2MOgYPXxszUFFZY-u6v_y/view?usp=drive_link",
+  "images": ["images/proj_9.png"]
+},
+
   "multiplayer-racing": {
     title: "Bad Biker",
     subtitle: "Online multiplayer bike racing game",
