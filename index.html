@@ -33,9 +33,7 @@
         font-family: 'Poppins', sans-serif;
       }
 
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
 
       body {
         background-color: var(--primary-color);
@@ -44,18 +42,12 @@
         position: relative;
       }
 
-      /* Cyberpunk Gradient Background */
       body::before {
         content: '';
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, 
-          rgba(15,14,23,0.9) 0%, 
-          rgba(31,27,54,0.8) 50%, 
-          rgba(15,14,23,0.9) 100%),
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(135deg, rgba(15,14,23,0.9) 0%, rgba(31,27,54,0.8) 50%, rgba(15,14,23,0.9) 100%),
           url('https://assets.codepen.io/3364143/cyberpunk-street.png');
         background-size: cover;
         background-position: center;
@@ -63,14 +55,11 @@
         opacity: 0.8;
       }
 
-      /* Grid Overlay */
       body::after {
         content: '';
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
         background: 
           linear-gradient(rgba(15,14,23,0.7) 1px, transparent 1px),
           linear-gradient(90deg, rgba(15,14,23,0.7) 1px, transparent 1px);
@@ -79,22 +68,20 @@
         pointer-events: none;
       }
 
-      /* Header Styles */
+      /* ── HEADER ── */
       header {
-        position: fixed;
-        top: 0;
-        left: 0;
+        position: fixed; top: 0; left: 0;
         width: 100%;
         padding: 20px 10%;
-        background-color: rgba(15, 14, 23, 0.85);
+        background-color: rgba(15,14,23,0.85);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         display: flex;
         justify-content: space-between;
         align-items: center;
         z-index: 1000;
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border-bottom: 1px solid rgba(19, 170, 226, 0.2);
+        transition: all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
+        border-bottom: 1px solid rgba(19,170,226,0.2);
       }
 
       header.scrolled {
@@ -113,15 +100,11 @@
         font-family: 'Montserrat', sans-serif;
       }
 
-      .logo span {
-        color: var(--accent-color);
-        text-shadow: var(--neon-glow);
-      }
+      .logo span { color: var(--accent-color); text-shadow: var(--neon-glow); }
 
       .logo::after {
         content: '_';
-        position: absolute;
-        right: -10px;
+        position: absolute; right: -10px;
         animation: blink 1s infinite step-end;
       }
 
@@ -130,9 +113,7 @@
         50% { opacity: 0; }
       }
 
-      .navbar {
-        display: flex;
-      }
+      .navbar { display: flex; }
 
       .navbar a {
         font-size: 18px;
@@ -146,8 +127,7 @@
         letter-spacing: 1px;
       }
 
-      .navbar a:hover,
-      .navbar a.active {
+      .navbar a:hover, .navbar a.active {
         color: var(--accent-color);
         text-shadow: var(--neon-glow);
       }
@@ -155,56 +135,73 @@
       .navbar a::after {
         content: '';
         position: absolute;
-        width: 0;
-        height: 2px;
+        width: 0; height: 2px;
         background: var(--accent-color);
-        bottom: -4px;
-        left: 0;
+        bottom: -4px; left: 0;
         transition: all 0.4s ease;
         box-shadow: var(--neon-glow);
       }
 
-      .navbar a:hover::after,
-      .navbar a.active::after {
-        width: 100%;
-      }
+      .navbar a:hover::after, .navbar a.active::after { width: 100%; }
 
-      /* Hamburger Menu */
       .hamburger {
         display: none;
         cursor: pointer;
         z-index: 1001;
         position: relative;
-        width: 30px;
-        height: 20px;
+        width: 30px; height: 20px;
       }
 
       .hamburger div {
-        width: 100%;
-        height: 3px;
+        width: 100%; height: 3px;
         background-color: var(--text-color);
         margin: 5px 0;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
         border-radius: 3px;
       }
 
       .hamburger.active div:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-5px,6px);
         background: var(--accent-color);
         box-shadow: var(--neon-glow);
       }
-
-      .hamburger.active div:nth-child(2) {
-        opacity: 0;
-      }
-
+      .hamburger.active div:nth-child(2) { opacity: 0; }
       .hamburger.active div:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-5px,-6px);
         background: var(--accent-color);
         box-shadow: var(--neon-glow);
       }
 
-      /* Hero Section */
+      /* ── AVAILABILITY BADGE (NEW) ── */
+      .availability-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(32,171,226,0.15);
+        border: 1px solid rgba(32,171,226,0.4);
+        border-radius: 50px;
+        padding: 8px 18px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent-color);
+        letter-spacing: 0.5px;
+      }
+
+      .availability-badge .dot {
+        width: 8px; height: 8px;
+        background: #00e676;
+        border-radius: 50%;
+        animation: pulse-dot 1.5s infinite;
+        box-shadow: 0 0 6px #00e676;
+      }
+
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.3); }
+      }
+
+      /* ── HERO ── */
       section {
         min-height: 100vh;
         padding: 4rem 10% 2rem;
@@ -227,9 +224,7 @@
         width: 100%;
       }
 
-      .hero-text {
-        max-width: 600px;
-      }
+      .hero-text { max-width: 600px; }
 
       .hero h1 {
         font-size: 3.5rem;
@@ -240,21 +235,45 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        text-shadow: 0 0 15px rgba(16, 156, 244, 0.3);
+        text-shadow: 0 0 15px rgba(16,156,244,0.3);
         margin-top: 20px;
       }
 
-      .hero h1 span {
-        color: var(--accent-color);
-        text-shadow: var(--neon-glow);
-      }
+      .hero h1 span { color: var(--accent-color); text-shadow: var(--neon-glow); }
 
       .hero h2 {
         font-size: 1.8rem;
         font-weight: 300;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         color: var(--accent-color);
         font-style: italic;
+      }
+
+      /* FIX: Remote badge under h2 (NEW) */
+      .hero-location {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+      }
+
+      .hero-location span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: var(--light-text);
+      }
+
+      .hero-location .remote-tag {
+        background: rgba(0,230,118,0.15);
+        border: 1px solid rgba(0,230,118,0.4);
+        color: #00e676;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
       }
 
       .hero p {
@@ -265,17 +284,14 @@
         line-height: 1.8;
       }
 
-      .hero-buttons {
-        display: flex;
-        gap: 20px;
-      }
+      .hero-buttons { display: flex; gap: 20px; }
 
       .btn {
         display: inline-block;
         padding: 14px 32px;
         border-radius: 50px;
         font-weight: 600;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
         border: none;
         cursor: pointer;
         position: relative;
@@ -302,7 +318,7 @@
         background: transparent;
         color: var(--accent-color);
         border: 2px solid var(--accent-color);
-        box-shadow: 0 0 10px rgba(4, 135, 243, 0.3);
+        box-shadow: 0 0 10px rgba(4,135,243,0.3);
       }
 
       .btn-outline:hover {
@@ -314,72 +330,35 @@
 
       .profile-image {
         position: absolute;
-        right: 5%;
-        top: 50%;
+        right: 5%; top: 50%;
         transform: translateY(-50%);
-        width: 400px;
-        height: 400px;
+        width: 400px; height: 400px;
         border-radius: 50%;
         overflow: hidden;
         border: 10px solid var(--secondary-color);
-        box-shadow: 0 0 30px rgba(0, 161, 248, 0.5);
+        box-shadow: 0 0 30px rgba(0,161,248,0.5);
         transition: all 0.5s ease;
       }
 
       .profile-image img {
-        width: 100%;
-        height: 100%;
+        width: 100%; height: 100%;
         object-fit: cover;
         filter: grayscale(20%) contrast(110%);
         transition: all 0.5s ease;
       }
 
-      .profile-image:hover {
-        border-color: var(--accent-color);
-        box-shadow: var(--neon-glow);
-      }
-
-      .profile-image:hover img {
-        filter: grayscale(0%) contrast(120%);
-        transform: scale(1.05);
-      }
+      .profile-image:hover { border-color: var(--accent-color); box-shadow: var(--neon-glow); }
+      .profile-image:hover img { filter: grayscale(0%) contrast(120%); transform: scale(1.05); }
 
       .hero-pattern {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: radial-gradient(rgba(0, 165, 248, 0.1) 2px, transparent 2px);
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: radial-gradient(rgba(0,165,248,0.1) 2px, transparent 2px);
         background-size: 30px 30px;
-        opacity: 0.5;
-        z-index: 1;
+        opacity: 0.5; z-index: 1;
       }
 
-       @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .profile-image {
-    order: -1; /* Image ko text ke upar le aayega */
-    position: relative;
-    top: unset;
-    right: unset;
-    transform: none;
-    margin: 0 auto;
-    width: 250px;
-    height: 250px;
-  }
-
-  .hero-text {
-    margin-top: 10px;
-  }
-}
-
-      /* About Section */
+      /* ── ABOUT ── */
       .about-section {
         background-color: var(--secondary-color);
         padding: 100px 0;
@@ -395,30 +374,7 @@
         padding: 0 5%;
       }
 
-      /* .about-img {
-        flex: 1;
-        position: relative;
-      }
-
-      .about-img img {
-        width: 100%;
-        max-width: 400px;
-        border-radius: 20px;
-        box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        transition: all 0.5s ease;
-        filter: grayscale(20%) contrast(110%);
-        border: 5px solid var(--accent-color);
-      }
-
-      .about-img img:hover {
-        transform: scale(1.02);
-        filter: grayscale(0%) contrast(120%);
-        box-shadow: var(--neon-glow);
-      } */
-
-      .about-content {
-        flex: 1;
-      }
+      .about-content { flex: 1; }
 
       .section-title {
         font-size: 3rem;
@@ -428,17 +384,13 @@
         display: inline-block;
       }
 
-      .section-title span {
-        color: var(--accent-color);
-      }
+      .section-title span { color: var(--accent-color); }
 
       .section-title::after {
         content: '';
         position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 100%;
-        height: 3px;
+        bottom: -10px; left: 0;
+        width: 100%; height: 3px;
         background: var(--accent-color);
         box-shadow: var(--neon-glow);
         transform: scaleX(0);
@@ -446,9 +398,7 @@
         transition: transform 0.5s ease;
       }
 
-      .section-title:hover::after {
-        transform: scaleX(1);
-      }
+      .section-title:hover::after { transform: scaleX(1); }
 
       .about-text {
         margin-bottom: 30px;
@@ -458,15 +408,12 @@
 
       .about-info {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 15px;
         margin-bottom: 30px;
       }
 
-      .info-item {
-        display: flex;
-        align-items: center;
-      }
+      .info-item { display: flex; align-items: center; }
 
       .info-item i {
         color: var(--accent-color);
@@ -476,12 +423,9 @@
         text-align: center;
       }
 
-      .info-item span {
-        font-weight: 600;
-        margin-right: 5px;
-      }
+      .info-item span { font-weight: 600; margin-right: 5px; }
 
-      /* Skills Section */
+      /* ── SKILLS ── */
       .skills-section {
         padding: 100px 0;
         background-color: var(--primary-color);
@@ -496,18 +440,18 @@
 
       .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
         gap: 30px;
         margin-top: 50px;
       }
 
       .skill-card {
-        background: rgba(31, 27, 54, 0.5);
+        background: rgba(31,27,54,0.5);
         padding: 40px 30px;
         border-radius: 20px;
         text-align: center;
-        border: 1px solid rgba(6, 184, 255, 0.2);
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(6,184,255,0.2);
+        transition: all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
         position: relative;
         overflow: hidden;
       }
@@ -522,7 +466,7 @@
         font-size: 60px;
         color: var(--accent-color);
         margin-bottom: 25px;
-        text-shadow: 0 0 15px rgba(6, 147, 255, 0.5);
+        text-shadow: 0 0 15px rgba(6,147,255,0.5);
       }
 
       .skill-card h3 {
@@ -535,11 +479,9 @@
       .skill-card h3::after {
         content: '';
         position: absolute;
-        bottom: -10px;
-        left: 50%;
+        bottom: -10px; left: 50%;
         transform: translateX(-50%);
-        width: 50px;
-        height: 2px;
+        width: 50px; height: 2px;
         background: var(--accent-color);
         box-shadow: var(--neon-glow);
       }
@@ -551,7 +493,7 @@
         text-shadow: 0 0 5px rgba(0,0,0,0.3);
       }
 
-      /* Experience Section */
+      /* ── EXPERIENCE ── */
       .experience-section {
         padding: 100px 0;
         background-color: var(--secondary-color);
@@ -575,9 +517,7 @@
         position: absolute;
         width: 2px;
         background-color: var(--accent-color);
-        top: 0;
-        bottom: 0;
-        left: 50%;
+        top: 0; bottom: 0; left: 50%;
         margin-left: -1px;
         box-shadow: var(--neon-glow);
       }
@@ -589,19 +529,14 @@
         box-sizing: border-box;
       }
 
-      .timeline-item:nth-child(odd) {
-        left: 0;
-      }
-
-      .timeline-item:nth-child(even) {
-        left: 50%;
-      }
+      .timeline-item:nth-child(odd) { left: 0; }
+      .timeline-item:nth-child(even) { left: 50%; }
 
       .timeline-content {
         padding: 30px;
-        background: rgba(31, 27, 54, 0.7);
+        background: rgba(31,27,54,0.7);
         border-radius: 10px;
-        border: 1px solid rgba(6, 172, 255, 0.2);
+        border: 1px solid rgba(6,172,255,0.2);
         transition: all 0.3s ease;
       }
 
@@ -610,35 +545,15 @@
         box-shadow: var(--neon-glow);
       }
 
-      .timeline-date {
-        color: var(--accent-color);
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-
-      .timeline-title {
-        font-size: 22px;
-        margin-bottom: 10px;
-        position: relative;
-      }
-
-      .timeline-company {
-        color: var(--accent-color);
-        margin-bottom: 15px;
-        font-style: italic;
-      }
-
-      .timeline-description {
-        color: var(--light-text);
-        line-height: 1.6;
-        margin-bottom: 15px;
-      }
+      .timeline-date { color: var(--accent-color); font-weight: 600; margin-bottom: 10px; }
+      .timeline-title { font-size: 22px; margin-bottom: 10px; position: relative; }
+      .timeline-company { color: var(--accent-color); margin-bottom: 15px; font-style: italic; }
+      .timeline-description { color: var(--light-text); line-height: 1.6; margin-bottom: 15px; }
 
       .timeline-item:nth-child(odd)::after {
         content: '';
         position: absolute;
-        width: 20px;
-        height: 20px;
+        width: 20px; height: 20px;
         right: -10px;
         background-color: var(--accent-color);
         border-radius: 50%;
@@ -649,8 +564,7 @@
       .timeline-item:nth-child(even)::after {
         content: '';
         position: absolute;
-        width: 20px;
-        height: 20px;
+        width: 20px; height: 20px;
         left: -10px;
         background-color: var(--accent-color);
         border-radius: 50%;
@@ -658,7 +572,7 @@
         box-shadow: var(--neon-glow);
       }
 
-      /* Projects Section */
+      /* ── PROJECTS ── */
       .projects-section {
         padding: 100px 0;
         background-color: var(--primary-color);
@@ -673,7 +587,7 @@
 
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
         gap: 20px;
         margin-top: 50px;
       }
@@ -682,10 +596,10 @@
         position: relative;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        transition: all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
         aspect-ratio: 16/9;
-        border: 1px solid rgba(6, 143, 255, 0.2);
+        border: 1px solid rgba(6,143,255,0.2);
       }
 
       .project-card:hover {
@@ -695,8 +609,7 @@
       }
 
       .project-image {
-        width: 100%;
-        height: 100%;
+        width: 100%; height: 100%;
         object-fit: cover;
         transition: all 0.5s ease;
       }
@@ -708,11 +621,9 @@
 
       .project-overlay {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(rgba(255, 255, 255, 0.1), var(--accent-color));
+        bottom: 0; left: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(rgba(255,255,255,0.1), var(--accent-color));
         display: flex;
         justify-content: center;
         align-items: center;
@@ -724,23 +635,10 @@
         opacity: 0.9;
       }
 
-      .project-card:hover .project-overlay {
-        transform: translateY(0);
-      }
+      .project-card:hover .project-overlay { transform: translateY(0); }
 
-      .project-title {
-        font-size: 18px;
-        margin-bottom: 12px;
-        color: var(--primary-color);
-        text-shadow: 0 0 5px rgba(0,0,0,0.3);
-      }
-
-      .project-description {
-        font-size: 12px;
-        margin-bottom: 12px;
-        color: var(--primary-color);
-        line-height: 1.6;
-      }
+      .project-title { font-size: 18px; margin-bottom: 12px; color: var(--primary-color); }
+      .project-description { font-size: 12px; margin-bottom: 12px; color: var(--primary-color); line-height: 1.6; }
 
       .project-tags {
         display: flex;
@@ -752,7 +650,7 @@
 
       .project-tag {
         padding: 5px 15px;
-        background: rgba(15, 14, 23, 0.7);
+        background: rgba(15,14,23,0.7);
         border-radius: 50px;
         font-size: 8px;
         font-weight: 600;
@@ -765,14 +663,13 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 60px;
-        height: 60px;
+        width: 60px; height: 60px;
         background: var(--primary-color);
         border-radius: 50%;
         color: var(--accent-color);
         text-decoration: none;
         font-size: 24px;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
       }
 
@@ -780,39 +677,22 @@
         background: var(--primary-color);
         color: var(--text-color);
         transform: rotate(360deg) scale(1.1);
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
       }
 
-      /* GitHub Section */
+      /* ── GITHUB ── */
       .github-section {
         padding: 100px 0;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1470&q=80');
+        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1470&q=80');
         background-size: cover;
         background-position: center;
         text-align: center;
         position: relative;
       }
 
-      .github-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 5%;
-      }
-
-      .github-title {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-
-      .github-title span {
-        color: var(--accent-color);
-      }
-
-      .github-subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-        color: var(--light-text);
-      }
+      .github-container { max-width: 800px; margin: 0 auto; padding: 0 5%; }
+      .github-title { font-size: 2.5rem; margin-bottom: 20px; }
+      .github-title span { color: var(--accent-color); }
+      .github-subtitle { font-size: 1.2rem; margin-bottom: 40px; color: var(--light-text); }
 
       .github-button {
         background-color: var(--accent-color);
@@ -828,37 +708,30 @@
         margin-top: 20px;
       }
 
-      .github-button:hover {
-        background-color: #fff;
-        transform: translateY(-5px);
-      }
+      .github-button:hover { background-color: #fff; transform: translateY(-5px); }
 
-      /* Contact Section */
+      /* ── CONTACT ── */
       .contact-section {
         padding: 100px 0;
         background-color: var(--secondary-color);
         position: relative;
       }
 
-      .contact-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 5%;
-      }
+      .contact-container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 
       .contact-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
         gap: 30px;
         margin-top: 50px;
       }
 
       .contact-card {
-        background: rgba(31, 27, 54, 0.5);
+        background: rgba(31,27,54,0.5);
         padding: 40px 30px;
         border-radius: 20px;
         text-align: center;
-        border: 1px solid rgba(6, 81, 255, 0.2);
+        border: 1px solid rgba(6,81,255,0.2);
         transition: all 0.3s ease;
       }
 
@@ -868,11 +741,7 @@
         box-shadow: var(--neon-glow);
       }
 
-      .contact-icon {
-        font-size: 50px;
-        color: var(--accent-color);
-        margin-bottom: 20px;
-      }
+      .contact-icon { font-size: 50px; color: var(--accent-color); margin-bottom: 20px; }
 
       .contact-card h3 {
         font-size: 24px;
@@ -883,10 +752,7 @@
         gap: 10px;
       }
 
-      .contact-card p {
-        color: var(--light-text);
-        margin-bottom: 15px;
-      }
+      .contact-card p { color: var(--light-text); margin-bottom: 15px; }
 
       .contact-card a {
         color: var(--accent-color);
@@ -895,26 +761,22 @@
         word-break: break-all;
       }
 
-      .contact-card a:hover {
-        text-decoration: underline;
-      }
+      .contact-card a:hover { text-decoration: underline; }
 
       .contact-form {
-        background: rgba(31, 27, 54, 0.5);
+        background: rgba(31,27,54,0.5);
         padding: 40px;
         border-radius: 20px;
-        border: 1px solid rgba(6, 143, 255, 0.2);
+        border: 1px solid rgba(6,143,255,0.2);
       }
 
-      .form-group {
-        margin-bottom: 20px;
-      }
+      .form-group { margin-bottom: 20px; }
 
       .form-control {
         width: 100%;
         padding: 15px;
-        background: rgba(15, 14, 23, 0.7);
-        border: 1px solid rgba(6, 118, 255, 0.2);
+        background: rgba(15,14,23,0.7);
+        border: 1px solid rgba(6,118,255,0.2);
         border-radius: 10px;
         color: var(--text-color);
         font-size: 16px;
@@ -927,10 +789,7 @@
         outline: none;
       }
 
-      textarea.form-control {
-        min-height: 150px;
-        resize: vertical;
-      }
+      textarea.form-control { min-height: 150px; resize: vertical; }
 
       .submit-btn {
         background: var(--accent-color);
@@ -950,17 +809,14 @@
         gap: 10px;
       }
 
-      .submit-btn:hover {
-        background: #fff;
-        transform: translateY(-3px);
-      }
+      .submit-btn:hover { background: #fff; transform: translateY(-3px); }
 
-      /* Footer */
+      /* ── FOOTER ── */
       footer {
         background-color: var(--primary-color);
         padding: 30px 0;
         text-align: center;
-        border-top: 1px solid rgba(6, 176, 255, 0.2);
+        border-top: 1px solid rgba(6,176,255,0.2);
       }
 
       .social-links {
@@ -970,570 +826,277 @@
         margin-bottom: 20px;
       }
 
-      .social-link {
-        color: var(--text-color);
-        font-size: 24px;
-        transition: all 0.3s ease;
-      }
+      .social-link { color: var(--text-color); font-size: 24px; transition: all 0.3s ease; }
+      .social-link:hover { color: var(--accent-color); transform: translateY(-5px); }
+      .copyright { color: var(--light-text); font-size: 14px; }
 
-      .social-link:hover {
-        color: var(--accent-color);
-        transform: translateY(-5px);
-      }
-
-      .copyright {
-        color: var(--light-text);
-        font-size: 14px;
-      }
-
-      /* Project Detail Modal - Responsive Updates */
+      /* ── MODAL ── */
       .project-modal {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.9);
-          z-index: 2000;
-          overflow-y: auto;
-          padding: 20px;
-          box-sizing: border-box;
+        display: none;
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 2000;
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
       }
 
       .modal-content {
-          background-color: var(--secondary-color);
-          margin: 40px auto;
-          max-width: 1200px;
-          width: 90%;
-          border-radius: 20px;
-          overflow: hidden;
-          box-shadow: var(--neon-glow);
-          position: relative;
+        background-color: var(--secondary-color);
+        margin: 40px auto;
+        max-width: 1200px;
+        width: 90%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--neon-glow);
+        position: relative;
       }
 
       .close-modal {
-          position: absolute;
-          top: 15px;
-          right: 15px;
-          color: var(--text-color);
-          font-size: 24px;
-          cursor: pointer;
-          z-index: 2001;
-          background: var(--accent-color);
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: var(--neon-glow);
+        position: absolute; top: 15px; right: 15px;
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 2001;
+        background: var(--accent-color);
+        width: 35px; height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--neon-glow);
       }
 
-      .project-detail-container {
-          display: flex;
-          flex-direction: column;
-      }
+      .project-detail-container { display: flex; flex-direction: column; }
 
       .project-detail-header {
-          padding: 30px;
-          background: var(--primary-color);
+        padding: 30px;
+        background: var(--primary-color);
       }
 
-      .project-detail-title {
-          font-size: 2rem;
-          margin-bottom: 10px;
-          color: var(--accent-color);
-          line-height: 1.2;
-      }
+      .project-detail-title { font-size: 2rem; margin-bottom: 10px; color: var(--accent-color); line-height: 1.2; }
+      .project-detail-subtitle { color: var(--light-text); margin-bottom: 15px; font-size: 1rem; }
 
-      .project-detail-subtitle {
-          color: var(--light-text);
-          margin-bottom: 15px;
-          font-size: 1rem;
-      }
-
-      .project-detail-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          margin-bottom: 15px;
-      }
+      .project-detail-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
 
       .project-detail-tag {
-          padding: 6px 12px;
-          background: var(--accent-color);
-          color: #000;
-          border-radius: 50px;
-          font-size: 12px;
-          font-weight: 600;
+        padding: 6px 12px;
+        background: var(--accent-color);
+        color: #000;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
       }
 
-      .project-detail-body {
-          display: flex;
-          flex-wrap: wrap;
-      }
+      .project-detail-body { display: flex; flex-wrap: wrap; }
 
-      .project-detail-media {
-          flex: 1;
-          min-width: 300px;
-          padding: 20px;
-          box-sizing: border-box;
-      }
+      .project-detail-media { flex: 1; min-width: 300px; padding: 20px; box-sizing: border-box; }
 
       .modal-video-container {
-          width: 100%;
-          margin-bottom: 20px;
-          position: relative;
-          overflow: hidden;
-          padding-top: 56.25%; /* 16:9 Aspect Ratio */
-          border-radius: 10px;
-          background: var(--primary-color);
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+        border-radius: 10px;
+        background: var(--primary-color);
       }
 
       .modal-video-container iframe,
       .modal-video-container video {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-          border-radius: 10px;
-      }
-
-      .view-video-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 12px 25px;
-          background: var(--accent-color);
-          color: #000;
-          text-decoration: none;
-          border-radius: 50px;
-          font-weight: 600;
-          transition: all 0.3s ease;
-          margin-top: 15px;
-      }
-
-      .view-video-btn:hover {
-          background: #fff;
-          transform: translateY(-3px);
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        border: none;
+        border-radius: 10px;
       }
 
       .project-detail-images {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-          gap: 15px;
-          margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+        gap: 15px;
+        margin-top: 20px;
       }
 
       .project-detail-image {
-          width: 100%;
-          border-radius: 10px;
-          transition: transform 0.3s ease;
-          cursor: pointer;
-          aspect-ratio: 16/9;
-          object-fit: cover;
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        aspect-ratio: 16/9;
+        object-fit: cover;
       }
 
-      .project-detail-image:hover {
-          transform: scale(1.05);
-      }
+      .project-detail-image:hover { transform: scale(1.05); }
 
-      .project-detail-info {
-          flex: 1;
-          min-width: 300px;
-          padding: 20px;
-          box-sizing: border-box;
-      }
+      .project-detail-info { flex: 1; min-width: 300px; padding: 20px; box-sizing: border-box; }
+      .project-detail-description { margin-bottom: 25px; line-height: 1.8; color: var(--light-text); }
+      .project-detail-features { margin-bottom: 25px; }
+      .project-detail-features h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1.3rem; }
 
-      .project-detail-description {
-          margin-bottom: 25px;
-          line-height: 1.8;
-          color: var(--light-text);
-      }
-
-      .project-detail-features {
-          margin-bottom: 25px;
-      }
-
-      .project-detail-features h3 {
-          color: var(--accent-color);
-          margin-bottom: 15px;
-          font-size: 1.3rem;
-      }
-
-      .feature-list {
-          list-style-type: none;
-          padding-left: 0;
-      }
+      .feature-list { list-style-type: none; padding-left: 0; }
 
       .feature-list li {
-          margin-bottom: 10px;
-          padding-left: 25px;
-          position: relative;
-          color: var(--light-text);
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+        color: var(--light-text);
       }
 
       .feature-list li:before {
-          content: "✓";
-          color: var(--accent-color);
-          position: absolute;
-          left: 0;
-          font-weight: bold;
+        content: "✓";
+        color: var(--accent-color);
+        position: absolute; left: 0;
+        font-weight: bold;
       }
 
-      .project-detail-links {
-          display: flex;
-          gap: 15px;
-          flex-wrap: wrap;
-      }
+      .project-detail-links { display: flex; gap: 15px; flex-wrap: wrap; }
 
       .project-detail-link {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 12px 20px;
-          background: var(--accent-color);
-          color: #000;
-          text-decoration: none;
-          border-radius: 50px;
-          font-weight: 600;
-          transition: all 0.3s ease;
-          font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        background: var(--accent-color);
+        color: #000;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 14px;
       }
 
-      .project-detail-link:hover {
-          background: #fff;
-          transform: translateY(-3px);
+      .project-detail-link:hover { background: #fff; transform: translateY(-3px); }
+
+      /* ── ANIMATIONS ── */
+      .floating { animation: float 6s ease-in-out infinite; }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(-50%); }
+        50% { transform: translateY(calc(-50% - 20px)); }
       }
 
-      /* Responsive adjustments for the modal */
-      @media (max-width: 992px) {
-          .project-detail-body {
-              flex-direction: column;
-          }
-          
-          .project-detail-header {
-              padding: 20px;
-          }
-          
-          .project-detail-title {
-              font-size: 1.8rem;
-          }
-          
-          .modal-content {
-              width: 95%;
-              margin: 20px auto;
-          }
-      }
-
-      @media (max-width: 768px) {
-          .project-modal {
-              padding: 10px;
-          }
-          
-          .project-detail-header {
-              padding: 15px;
-          }
-          
-          .project-detail-title {
-              font-size: 1.5rem;
-          }
-          
-          .project-detail-subtitle {
-              font-size: 0.9rem;
-          }
-          
-          .project-detail-media,
-          .project-detail-info {
-              padding: 15px;
-          }
-          
-          .project-detail-images {
-              grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-              gap: 10px;
-          }
-          
-          .project-detail-tag {
-              font-size: 10px;
-              padding: 4px 10px;
-          }
-          
-          .project-detail-links {
-              flex-direction: column;
-          }
-          
-          .project-detail-link {
-              justify-content: center;
-          }
-          
-          .close-modal {
-              top: 10px;
-              right: 10px;
-              width: 30px;
-              height: 30px;
-              font-size: 18px;
-          }
-      }
-
-      @media (max-width: 576px) {
-          .project-detail-title {
-              font-size: 1.3rem;
-          }
-          
-          .project-detail-tags {
-              gap: 5px;
-          }
-          
-          .project-detail-tag {
-              padding: 3px 8px;
-              font-size: 9px;
-          }
-          
-          .project-detail-images {
-              grid-template-columns: repeat(2, 1fr);
-          }
-          
-          .modal-video-container {
-              padding-top: 75%; /* 4:3 Aspect Ratio for mobile */
-          }
-      }
-
-      /* Responsive Design */
-      @media (max-width: 1200px) {
-          .profile-image {
-              width: 350px;
-              height: 350px;
-          }
-      }
-
-      @media (max-width: 992px) {
-          .hero h1 {
-              font-size: 2.8rem;
-          }
-          
-          .about-container {
-              flex-direction: column;
-          }
-          
-          .timeline::before {
-              left: 31px;
-          }
-          
-          .timeline-item {
-              width: 100%;
-              padding-left: 70px;
-              padding-right: 25px;
-          }
-          
-          .timeline-item:nth-child(even) {
-              left: 0;
-          }
-          
-          .timeline-item:nth-child(odd)::after,
-          .timeline-item:nth-child(even)::after {
-              left: 21px;
-          }
-      }
-
-      @media (max-width: 768px) {
-          .hamburger {
-              display: flex;
-              flex-direction: column;
-          }
-
-          .navbar {
-              position: fixed;
-              top: 0;
-              left: -100%;
-              width: 100%;
-              height: 100vh;
-              background: rgba(15, 14, 23, 0.95);
-              backdrop-filter: blur(10px);
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-              z-index: 1000;
-          }
-
-          .navbar.active {
-              left: 0;
-          }
-
-          .navbar a {
-              margin: 15px 0;
-              font-size: 24px;
-          }
-
-          .hero {
-              flex-direction: column;
-              text-align: center;
-              padding-top: 100px;
-          }
-
-          .hero-text {
-              margin: 0 auto;
-          }
-
-          .hero-buttons {
-              justify-content: center;
-          }
-
-          .profile-image {
-              position: relative;
-              right: auto;
-              top: auto;
-              transform: none;
-              margin: 20px auto 0;
-              width: 300px;
-              height: 300px;
-          }
-
-          .projects-grid {
-              grid-template-columns: 1fr;
-          }
-          
-          .project-overlay {
-              padding: 0 20px;
-          }
-          
-          .project-title {
-              font-size: 22px;
-          }
-          
-          .project-description {
-              font-size: 14px;
-          }
-      }
-
-      @media (max-width: 576px) {
-          .hero h1 {
-              font-size: 2.2rem;
-          }
-
-          .hero h2 {
-              font-size: 1.2rem;
-          }
-
-          .hero-buttons {
-              flex-direction: column;
-              gap: 15px;
-          }
-
-          .btn {
-              width: 100%;
-          }
-
-          .section-title {
-              font-size: 2.2rem;
-          }
-
-          .about-info {
-              grid-template-columns: 1fr;
-          }
-          
-          .project-tags {
-              flex-wrap: wrap;
-              justify-content: center;
-          }
-          
-          .project-tag {
-              font-size: 10px;
-              padding: 4px 10px;
-          }
-          
-          .projects-grid {
-              gap: 20px;
-          }
-          
-          .project-card {
-              aspect-ratio: 4/3;
-          }
-      }
-
-      /* Animation */
-      /* @keyframes float {
-          0% {
-              transform: translateY(0px);
-          }
-          50% {
-              transform: translateY(-20px);
-          }
-          100% {
-              transform: translateY(0px);
-          }
-      } */
-
-      .floating {
-          animation: float 6s ease-in-out infinite;
-      }
-
-      /* Custom Cursor */
       .cursor {
-          position: fixed;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: var(--accent-color);
-          transform: translate(-50%, -50%);
-          pointer-events: none;
-          mix-blend-mode: difference;
-          z-index: 1000;
-          transition: transform 0.1s;
-          box-shadow: var(--neon-glow);
+        position: fixed;
+        width: 20px; height: 20px;
+        border-radius: 50%;
+        background: var(--accent-color);
+        transform: translate(-50%,-50%);
+        pointer-events: none;
+        mix-blend-mode: difference;
+        z-index: 9999;
+        transition: transform 0.1s;
+        box-shadow: var(--neon-glow);
       }
 
       .cursor-follower {
-          position: fixed;
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          border: 1px solid var(--accent-color);
-          transform: translate(-50%, -50%);
-          pointer-events: none;
-          z-index: 999;
-          transition: transform 0.4s, width 0.3s, height 0.3s;
-          box-shadow: var(--neon-glow);
+        position: fixed;
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--accent-color);
+        transform: translate(-50%,-50%);
+        pointer-events: none;
+        z-index: 9998;
+        transition: transform 0.4s, width 0.3s, height 0.3s;
+        box-shadow: var(--neon-glow);
       }
 
-      /* Typing Animation */
       #typing-text {
-          border-right: 3px solid var(--accent-color);
-          white-space: nowrap;
-          overflow: hidden;
-          display: inline-block;
+        border-right: 3px solid var(--accent-color);
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
       }
 
-      @keyframes typing {
-          from { width: 0 }
-          to { width: 100% }
+      /* ── RESPONSIVE ── */
+      @media (max-width: 1200px) { .profile-image { width: 350px; height: 350px; } }
+
+      @media (max-width: 992px) {
+        .hero h1 { font-size: 2.8rem; }
+        .about-container { flex-direction: column; }
+        .timeline::before { left: 31px; }
+        .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+        .timeline-item:nth-child(even) { left: 0; }
+        .timeline-item:nth-child(odd)::after,
+        .timeline-item:nth-child(even)::after { left: 21px; }
+        .project-detail-body { flex-direction: column; }
+        .project-detail-header { padding: 20px; }
+        .project-detail-title { font-size: 1.8rem; }
+        .modal-content { width: 95%; margin: 20px auto; }
       }
 
-      @keyframes blink-caret {
-          from, to { border-color: transparent }
-          50% { border-color: var(--accent-color) }
+      @media (max-width: 768px) {
+        .hamburger { display: flex; flex-direction: column; }
+
+        .navbar {
+          position: fixed; top: 0; left: -100%;
+          width: 100%; height: 100vh;
+          background: rgba(15,14,23,0.95);
+          backdrop-filter: blur(10px);
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
+          z-index: 1000;
+        }
+
+        .navbar.active { left: 0; }
+        .navbar a { margin: 15px 0; font-size: 24px; }
+
+        .hero { flex-direction: column; text-align: center; padding-top: 100px; }
+        .hero-text { margin: 0 auto; }
+        .hero-buttons { justify-content: center; }
+        .hero-location { justify-content: center; }
+
+        .profile-image {
+          position: relative; right: auto; top: auto;
+          transform: none;
+          margin: 20px auto 0;
+          width: 300px; height: 300px;
+        }
+
+        .floating { animation: float-mobile 6s ease-in-out infinite; }
+
+        @keyframes float-mobile {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-15px); }
+        }
+
+        .projects-grid { grid-template-columns: 1fr; }
+        .project-modal { padding: 10px; }
+        .project-detail-header { padding: 15px; }
+        .project-detail-title { font-size: 1.5rem; }
+        .project-detail-media, .project-detail-info { padding: 15px; }
+        .project-detail-links { flex-direction: column; }
+        .project-detail-link { justify-content: center; }
+        .close-modal { top: 10px; right: 10px; width: 30px; height: 30px; font-size: 18px; }
+      }
+
+      @media (max-width: 576px) {
+        .hero h1 { font-size: 2.2rem; }
+        .hero h2 { font-size: 1.2rem; }
+        .hero-buttons { flex-direction: column; gap: 15px; }
+        .btn { width: 100%; }
+        .section-title { font-size: 2.2rem; }
+        .about-info { grid-template-columns: 1fr; }
+        .project-card { aspect-ratio: 4/3; }
+        .project-detail-images { grid-template-columns: repeat(2,1fr); }
       }
     </style>
 </head>
 
 <body>
-    <!-- Custom Cursor -->
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
     <!-- Header -->
     <header id="header">
         <a href="#" class="logo">Ahmad<span>Raza.</span></a>
-        
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
@@ -1544,355 +1107,326 @@
         </nav>
     </header>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-pattern"></div>
-  <div class="hero-content">
-    
-    <!-- Profile Image -->
-    <div class="profile-image floating">
-      <img src="ahmadpic.png" alt="Muhammad Ahmad Raza">
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
 
-    <!-- Hero Text -->
-    <div class="hero-text">
-      <h1>HI, I'm <span>Muhammad Ahmad Raza</span></h1>
-      <h2 id="typing-text">Interactive Systems Developer | XR Research Enthusiast | Game Technologist</h2>
-      <p>
-        I design and develop interactive digital experiences with a focus on immersive systems,
-        real-time rendering, and user-centered game mechanics. With 4+ years of professional
-        experience in AR/VR and multiplayer systems, my work bridges creative design and
-        technical implementation. I am particularly interested in research-driven game
-        development, exploring how interaction design and system architecture shape player
-        experience.
-      </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">Collaborate</a>
-        <a href="RESUME.pdf" class="btn btn-outline">Download CV</a>
-      </div>
-    </div>
+            <div class="profile-image floating">
+                <img src="ahmadpic.png" alt="Muhammad Ahmad Raza">
+            </div>
 
-  </div>
-</section>
+            <div class="hero-text">
+                <!-- FIX 1: Availability badge -->
+                <div class="availability-badge">
+                    <span class="dot"></span>
+                    Available for Remote Opportunities
+                </div>
 
-<!-- About Section -->
-<section id="about" class="about-section">
-    <div class="about-container">
-        <div class="about-content" data-aos="fade-left">
-            <h2 class="section-title">About <span>Me</span></h2>
-           <p class="about-text">
-                I am a Computer Science graduate and Unity developer specializing in immersive
-                technologies and interactive systems. Over the past four years, I have developed
-                AR/VR simulations, multiplayer game architectures, and performance-optimized
-                applications across platforms.
-                <br><br>
-                My current focus extends beyond implementation toward research-oriented game
-                development — investigating interaction models, spatial computing, rendering
-                optimization, and systemic game design. I am motivated by the question of how
-                digital play and immersive systems influence cognition, engagement, and
-                collaborative experience.
+                <h1>HI, I'm <span>Muhammad Ahmad Raza</span></h1>
+                <h2 id="typing-text">Unity & AR/VR Developer</h2>
+
+                <!-- FIX 2: Location + remote tag -->
+                <div class="hero-location">
+                    <span><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</span>
+                    <span class="remote-tag">✓ Open to Remote & Relocation</span>
+                </div>
+
+                <p>
+                    I design and develop interactive digital experiences with a focus on immersive systems,
+                    real-time rendering, and user-centered game mechanics. With 4+ years of professional
+                    experience in AR/VR and multiplayer systems, my work bridges creative design and
+                    technical implementation.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Collaborate</a>
+                    <a href="RESUME.pdf" class="btn btn-outline">Download CV</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content" data-aos="fade-left">
+                <h2 class="section-title">About <span>Me</span></h2>
+                <p class="about-text">
+                    I am a Computer Science graduate from <strong style="color:var(--accent-color)">University of Engineering and Technology (UET), Lahore</strong> and a Unity developer specializing in immersive technologies and interactive systems. Over the past four years, I have developed AR/VR simulations, multiplayer game architectures, and performance-optimized applications across platforms.
+                    <br><br>
+                    My current focus extends beyond implementation toward research-oriented game development — investigating interaction models, spatial computing, rendering optimization, and systemic game design.
+                </p>
+
+                <div class="about-info">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span>Name:</span> Muhammad Ahmad Raza
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Focus:</span> Game Dev & AR/VR
+                    </div>
+                    <!-- FIX 3: Location with remote note -->
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Location:</span> Lahore, Pakistan (Remote Ready)
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email:</span> mahmedraza503@gmail.com
+                    </div>
+                    <!-- FIX 4: UET Lahore added -->
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education:</span> BS CS — UET Lahore
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-language"></i>
+                        <span>Languages:</span> English, Urdu
+                    </div>
+                </div>
+
+                <a href="https://www.linkedin.com/in/muhammad-ahmad-00637b199" class="btn btn-primary" style="display:inline-block;margin-top:20px;" target="_blank">Connect on LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <h2 class="section-title" data-aos="fade-up">Core <span>Competencies</span></h2>
+            <p class="about-text" style="text-align:center;max-width:800px;margin:0 auto 50px;" data-aos="fade-up" data-aos-delay="100">
+                My work combines creative experimentation with technical rigor, emphasizing system architecture, interaction design, and immersive user experience.
             </p>
-            
-            <div class="about-info">
-                <div class="info-item">
-                    <i class="fas fa-user"></i>
-                    <span>Name:</span> Muhammad Ahmad Raza
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Focus:</span> Game Development & Interactive Systems Research
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Location:</span> Lahore, Pakistan
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email:</span> mahmedraza503@gmail.com
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Education:</span> Bachelor in Computer Science
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-language"></i>
-                    <span>Languages:</span> English, Urdu
-                </div>
-            </div>
-            
-            <a href="https://www.linkedin.com/in/muhammad-ahmad-00637b199" class="btn btn-primary" style="display: inline-block; margin-top: 20px;">Connect on LinkedIn</a>
-        </div>
-    </div>
-</section>
 
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section">
-    <div class="skills-container">
-        <h2 class="section-title" data-aos="fade-up">Core <span>Competencies</span></h2>
-        <p class="about-text" style="text-align: center; max-width: 800px; margin: 0 auto 50px;" data-aos="fade-up" data-aos-delay="100">
-            My work combines creative experimentation with technical rigor, emphasizing
-            system architecture, interaction design, and immersive user experience.
-        </p>
-        
-        <div class="skills-grid">
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                <i class="fab fa-unity"></i>
-                <h3>Interactive Systems Engineering</h3>
-                <p>Designing scalable gameplay systems, modular architectures, and real-time simulation environments using Unity.</p>
-            </div>
-            
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-vr-cardboard"></i>
-                <h3>Immersive Technologies</h3>
-                <p>Development of AR/VR prototypes exploring spatial interaction, gesture systems, and embodied user experience.</p>
-            </div>
-            
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-code"></i>
-                <h3>System Optimization</h3>
-                <p>Performance profiling, rendering optimization, and efficient resource management for real-time applications.</p>
-            </div>
-            
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
-                <i class="fas fa-gamepad"></i>
-                <h3>Game Design & Mechanics</h3>
-                <p>Designing player-centered mechanics, balancing systemic interactions, and structuring meaningful gameplay loops.</p>
-            </div>
-            
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
-                <i class="fas fa-network-wired"></i>
-                <h3>Multiplayer Architecture</h3>
-                <p>Implementation of synchronized gameplay systems using networking frameworks and backend integrations.</p>
-            </div>
-            
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
-                <i class="fas fa-brain"></i>
-                <h3>Research-Oriented Thinking</h3>
-                <p>Exploring how technical systems influence user cognition, engagement, and digital play culture.</p>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-unity"></i>
+                    <h3>Interactive Systems Engineering</h3>
+                    <p>Designing scalable gameplay systems, modular architectures, and real-time simulation environments using Unity.</p>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-vr-cardboard"></i>
+                    <h3>Immersive Technologies</h3>
+                    <p>Development of AR/VR prototypes exploring spatial interaction, gesture systems, and embodied user experience.</p>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-code"></i>
+                    <h3>System Optimization</h3>
+                    <p>Performance profiling, rendering optimization, and efficient resource management for real-time applications.</p>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Game Design & Mechanics</h3>
+                    <p>Designing player-centered mechanics, balancing systemic interactions, and structuring meaningful gameplay loops.</p>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Multiplayer Architecture</h3>
+                    <p>Implementation of synchronized gameplay systems using Photon Fusion and Firebase backend integrations.</p>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+                    <i class="fas fa-brain"></i>
+                    <h3>Research-Oriented Thinking</h3>
+                    <p>Exploring how technical systems influence user cognition, engagement, and digital play culture.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience-section">
         <div class="experience-container">
             <h2 class="section-title" data-aos="fade-up">Work <span>Experience</span></h2>
-            <p class="about-text" style="text-align: center; max-width: 800px; margin: 0 auto 50px;" data-aos="fade-up" data-aos-delay="100">My professional journey in game development and AR/VR technologies.</p>
-            
+            <p class="about-text" style="text-align:center;max-width:800px;margin:0 auto 50px;" data-aos="fade-up" data-aos-delay="100">My professional journey in game development and AR/VR technologies.</p>
+
             <div class="timeline">
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-content">
-                        <div class="timeline-date">2022 - 2025</div>
+                        <div class="timeline-date">2022 – 2025</div>
                         <h3 class="timeline-title">Software Engineer</h3>
                         <div class="timeline-company">Conovo Technologies</div>
-                        <p class="timeline-description">Conovo Technologies is a leading company in providing custom game development and AR/VR solutions.</p>
-                        <ul style="color: var(--light-text); padding-left: 20px; margin-top: 15px;">
+                        <p class="timeline-description">Leading company in custom game development and AR/VR solutions.</p>
+                        <ul style="color:var(--light-text);padding-left:20px;margin-top:15px;">
                             <li>Worked collaboratively with clients to understand and tailor project requirements</li>
-                            <li>Maintained regular communication with clients to align project progress with expectations</li>
+                            <li>Maintained regular communication to align project progress with expectations</li>
                             <li>Successfully completed multiple projects, meeting and exceeding client requirements</li>
-                            <li>Conducted testing and debugging to ensure optimal performance and product quality</li>
+                            <li>Conducted testing and debugging to ensure optimal performance</li>
                         </ul>
-                        <a href="conovo.pdf" class="btn btn-outline" style="margin-top: 15px; display: inline-block;">View Experience Letter</a>
+                        <a href="conovo.pdf" class="btn btn-outline" style="margin-top:15px;display:inline-block;">View Experience Letter</a>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="timeline-content">
-                        <div class="timeline-date">2021 - 2022</div>
+                        <div class="timeline-date">2021 – 2022</div>
                         <h3 class="timeline-title">Game Developer</h3>
                         <div class="timeline-company">PIXIE BOTS</div>
-                        <p class="timeline-description">PIXIE BOTS specializes in creating cutting-edge simulation games and AI-driven solutions to enhance user experiences.</p>
-                        <ul style="color: var(--light-text); padding-left: 20px; margin-top: 15px;">
-                            <li>Developed and implemented game systems and mechanics using C# and Unity</li>
-                            <li>Created simulation games, including gameplay mechanics, AI systems, and realistic physics simulations</li>
+                        <p class="timeline-description">Specializes in cutting-edge simulation games and AI-driven solutions.</p>
+                        <ul style="color:var(--light-text);padding-left:20px;margin-top:15px;">
+                            <li>Developed game systems and mechanics using C# and Unity</li>
+                            <li>Created simulation games with AI systems and realistic physics</li>
                             <li>Collaborated with engineers to optimize game performance and reduce load times</li>
                         </ul>
-                        <a href="pixiebot.pdf" class="btn btn-outline" style="margin-top: 15px; display: inline-block;">View Experience Letter</a>
+                        <a href="pixiebot.pdf" class="btn btn-outline" style="margin-top:15px;display:inline-block;">View Experience Letter</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-  <!-- Projects Section -->
-<section id="projects" class="projects-section">
-    <div class="projects-container">
-        <h2 class="section-title" data-aos="fade-up">My <span>Projects</span></h2>
-        <p class="about-text" style="text-align: center; max-width: 800px; margin: 0 auto 50px;" data-aos="fade-up" data-aos-delay="100">
-            Selected projects highlighting my experience in AR/VR systems, multiplayer architecture, and interactive game design.
-        </p>
-        
-        <div class="projects-grid">
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/proj_1.jpg" alt="Driving Training Tutorial" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">Driving Training Tutorial</h3>
-                    <p class="project-description">Mixed reality training system for HoloLens integrating spatial traffic simulation and rule-based driving instruction.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">HoloLens</span>
-                        <span class="project-tag">MRTK</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="driving-training">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="images/proj_2.jpg" alt="VR Video Player" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">VR Video Player</h3>
-                    <p class="project-description">WebGL-based VR video application focused on immersive UI placement and interaction design.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">WebGL</span>
-                        <span class="project-tag">VR</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="vr-video-player">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <img src="images/proj_3.jpg" alt="AR Drawing App" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">AR Drawing App</h3>
-                    <p class="project-description">Spatial AR drawing tool enabling real-time 3D sketching and interaction within physical environments.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">AR Foundation</span>
-                        <span class="project-tag">Mobile</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="ar-drawing">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                <img src="images/proj_4.jpg" alt="Falcon Strike" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">Falcon Strike</h3>
-                    <p class="project-description">Modular game system integrating AWS S3 for dynamic content delivery and scalable level architecture.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">AWS</span>
-                        <span class="project-tag">Game Design</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="falcon-strike">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                <img src="images/proj_5.jpg" alt="Poker♡Poker" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">Poker♡Poker</h3>
-                    <p class="project-description">Online multiplayer card game with custom backend infrastructure and synchronized gameplay logic.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">FireBase</span>
-                        <span class="project-tag">C#</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="ml-unity">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-                <img src="images/proj_6.png" alt="AR Furniture App" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">Drone Strike</h3>
-                    <p class="project-description">Tactical action prototype centered on AI pathfinding and player-agent combat systems.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">C#</span>
-                        <span class="project-tag">AI Path Finding</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="ar-furniture">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-                <img src="images/proj_7.jpg" alt="VR Escape Room" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">Meta Clash</h3>
-                    <p class="project-description">Strategy-based building and combat game exploring systemic balance and competitive mechanics.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">C#</span>
-                        <span class="project-tag">Build/Fight</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="vr-escape">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <h2 class="section-title" data-aos="fade-up">My <span>Projects</span></h2>
+            <p class="about-text" style="text-align:center;max-width:800px;margin:0 auto 50px;" data-aos="fade-up" data-aos-delay="100">
+                Selected projects highlighting my experience in AR/VR systems, multiplayer architecture, and interactive game design.
+            </p>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-                <img src="images/proj_9.png" alt="AR Navigation" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">AR Navigation</h3>
-                    <p class="project-description">AR navigation system integrating QR anchors and Firebase cloud synchronization.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">C#</span>
-                        <span class="project-tag">AR Foundation</span>
-                        <span class="project-tag">Firebase</span>
-                        <span class="project-tag">Cloud</span>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/proj_1.jpg" alt="Driving Training Tutorial" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Driving Training Tutorial</h3>
+                        <p class="project-description">Mixed reality training system for HoloLens integrating spatial traffic simulation.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">HoloLens</span>
+                            <span class="project-tag">MRTK</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="driving-training"><i class="fas fa-external-link-alt"></i></a>
                     </div>
-                    <a href="#" class="project-link view-project" data-project-id="ar-navigation">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/proj_2.jpg" alt="VR Video Player" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">VR Video Player</h3>
+                        <p class="project-description">WebGL-based VR video application focused on immersive UI placement and interaction design.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">WebGL</span>
+                            <span class="project-tag">VR</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="vr-video-player"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/proj_3.jpg" alt="AR Drawing App" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">AR Drawing App</h3>
+                        <p class="project-description">Spatial AR drawing tool enabling real-time 3D sketching within physical environments.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">AR Foundation</span>
+                            <span class="project-tag">Mobile</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="ar-drawing"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/proj_4.jpg" alt="Falcon Strike" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Falcon Strike</h3>
+                        <p class="project-description">Modular game system integrating AWS S3 for dynamic content delivery and scalable level architecture.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">AWS</span>
+                            <span class="project-tag">Game Design</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="falcon-strike"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <img src="images/proj_5.jpg" alt="Poker Poker" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Poker♡Poker</h3>
+                        <p class="project-description">Online multiplayer card game with custom backend infrastructure and synchronized gameplay logic.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">C#</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="ml-unity"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                    <img src="images/proj_6.png" alt="Drone Strike" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Drone Strike</h3>
+                        <p class="project-description">Tactical action prototype centered on AI pathfinding and player-agent combat systems.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">AI Pathfinding</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="ar-furniture"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                    <img src="images/proj_7.jpg" alt="Meta Clash" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Meta Clash</h3>
+                        <p class="project-description">Strategy-based building and combat game exploring systemic balance and competitive mechanics.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">Strategy</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="vr-escape"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                    <img src="images/proj_9.png" alt="AR Navigation" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">AR Navigation</h3>
+                        <p class="project-description">AR navigation system integrating QR anchors and Firebase cloud synchronization.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">AR Foundation</span>
+                            <span class="project-tag">Firebase</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="ar-navigation"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+                    <img src="images/proj_8.jpg" alt="Bad Biker" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Bad Biker</h3>
+                        <p class="project-description">Real-time multiplayer racing game built with Photon Fusion and latency-aware synchronization.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">Photon Fusion</span>
+                            <span class="project-tag">Multiplayer</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="multiplayer-racing"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="900">
+                    <img src="images/proj_10.jpg" alt="Callers Of The Current" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">COTC</h3>
+                        <p class="project-description">1v1 online card battler combining deck-building mechanics with server-authoritative networking.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">Photon Fusion</span>
+                            <span class="project-tag">Card Game</span>
+                        </div>
+                        <a href="#" class="project-link view-project" data-project-id="multiplayer-cotc"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="900">
-                <img src="images/proj_8.jpg" alt="Multiplayer Racing" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">Bad Biker</h3>
-                    <p class="project-description">Real-time multiplayer racing game built with Photon Fusion and latency-aware synchronization.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">Fusion</span>
-                        <span class="project-tag">Multiplayer</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="multiplayer-racing">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="900">
-                <img src="images/proj_10.jpg" alt="Callers Of The Current" class="project-image">
-                <div class="project-overlay">
-                    <h3 class="project-title">COTC</h3>
-                    <p class="project-description">1v1 online card battler combining deck-building mechanics with server-authoritative networking.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">Unity</span>
-                        <span class="project-tag">Photon Fusion</span>
-                        <span class="project-tag">Multiplayer</span>
-                        <span class="project-tag">Card Game</span>
-                        <span class="project-tag">Backend</span>
-                    </div>
-                    <a href="#" class="project-link view-project" data-project-id="multiplayer-cotc">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- GitHub Section -->
     <section class="github-section">
@@ -1900,7 +1434,7 @@
             <h2 class="github-title">More projects on <span>GitHub</span></h2>
             <p class="github-subtitle">I love creating innovative solutions and pushing the boundaries of interactive experiences</p>
             <a href="https://github.com/Ahmadraza1514" target="_blank" class="github-button">
-                Open GitHub Profile
+                <i class="fab fa-github"></i> Open GitHub Profile
             </a>
         </div>
     </section>
@@ -1909,83 +1443,73 @@
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <h2 class="section-title" data-aos="fade-up">Get In <span>Touch</span></h2>
-            <p class="about-text" style="text-align: center; max-width: 800px; margin: 0 auto 50px;" data-aos="fade-up" data-aos-delay="100">Feel free to reach out for collaborations or just a friendly hello!</p>
-            
+            <p class="about-text" style="text-align:center;max-width:800px;margin:0 auto 50px;" data-aos="fade-up" data-aos-delay="100">
+                Open to remote opportunities, collaborations, and exciting game development projects worldwide!
+            </p>
+
             <div class="contact-grid">
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <h3>Location</h3>
                     <p>Lahore, Pakistan</p>
+                    <p style="color:var(--accent-color);font-weight:600;">Open to Remote & Relocation</p>
                 </div>
-                
+
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                     <h3>Email</h3>
                     <p><a href="mailto:mahmedraza503@gmail.com">mahmedraza503@gmail.com</a></p>
                 </div>
-                
+
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
                     <h3>Phone</h3>
                     <p><a href="tel:+923047097379">+92 304 7097379</a></p>
                 </div>
-                
+
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="contact-icon">
-                        <i class="fas fa-file-download"></i>
-                    </div>
+                    <div class="contact-icon"><i class="fas fa-file-download"></i></div>
                     <h3>Resume</h3>
                     <p><a href="RESUME.pdf" download>Download Resume</a></p>
                 </div>
             </div>
-            
+
+            <!-- FIX 5: Formspree contact form -->
             <div class="contact-form" data-aos="fade-up" data-aos-delay="600">
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/mahmedraza503@gmail.com" method="POST">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
                 </form>
             </div>
-            
+
             <div class="social-links" data-aos="fade-up" data-aos-delay="700">
-                <a href="https://www.linkedin.com/in/muhammad-ahmad-00637b199" class="social-link" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/Ahmadraza1514" class="social-link" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/its_ahmad011/profilecard/?igsh=MXI4MjU4cWs5ZWMxag==" class="social-link" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                <a href="https://www.linkedin.com/in/muhammad-ahmad-00637b199" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Ahmadraza1514" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/its_ahmad011/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="copyright">
             &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Ahmad Raza
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; width: 50px; height: 50px; background: var(--accent-color); color: #000; border-radius: 50%; text-align: center; line-height: 50px; font-size: 20px; box-shadow: var(--neon-glow);">
+    <a href="#" id="backToTop" style="display:none;position:fixed;bottom:20px;right:20px;z-index:99;width:50px;height:50px;background:var(--accent-color);color:#000;border-radius:50%;text-align:center;line-height:50px;font-size:20px;box-shadow:var(--neon-glow);text-decoration:none;">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -2024,441 +1548,263 @@
         </div>
     </div>
 
-    <!-- Scripts -->
-    <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
     <script>
-        // Project data
-       const projects = {
-  "driving-training": {
-    title: "Driving Training Tutorial",
-    subtitle: "Mixed Reality Driving Training System for HoloLens",
-    description: "A mixed reality training system designed for HoloLens that teaches core driving skills through spatial simulation, interactive traffic scenarios, and guided instructional workflows.",
-    features: [
-      "Spatially anchored mixed reality driving lessons",
-      "Interactive traffic rule simulation",
-      "Real-time spatial mapping and environment awareness",
-      "Guided training and evaluation modules",
-      "Performance tracking and progress analytics"
-    ],
-    tags: ["Unity","HoloLens","MRTK","Mixed Reality"],
-    githubUrl: "https://github.com/Ahmadraza1514/Driving-Training",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/1cHRkVd_oP1oczWyhPe7B73QqzecT7XZk/view?usp=drive_link",
-    images: ["images/proj_1.jpg","images/proj_1b.jpg"]
-  },
+        // ── PROJECT DATA (FIX 6: AR Navigation GitHub link corrected) ──
+        const projects = {
+            "driving-training": {
+                title: "Driving Training Tutorial",
+                subtitle: "Mixed Reality Driving Training System for HoloLens",
+                description: "A mixed reality training system designed for HoloLens that teaches core driving skills through spatial simulation, interactive traffic scenarios, and guided instructional workflows.",
+                features: ["Spatially anchored mixed reality driving lessons","Interactive traffic rule simulation","Real-time spatial mapping and environment awareness","Guided training and evaluation modules","Performance tracking and progress analytics"],
+                tags: ["Unity","HoloLens","MRTK","Mixed Reality"],
+                githubUrl: "https://github.com/Ahmadraza1514/Driving-Training",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/1cHRkVd_oP1oczWyhPe7B73QqzecT7XZk/view?usp=drive_link",
+                images: ["images/proj_1.jpg","images/proj_1b.jpg"]
+            },
+            "vr-video-player": {
+                title: "VR Video Player",
+                subtitle: "Immersive WebGL Virtual Cinema Experience",
+                description: "A WebGL-based VR video platform exploring immersive playback, spatial UI placement, and interaction ergonomics within a customizable virtual environment.",
+                features: ["360° immersive video playback","Customizable virtual viewing environments","Spatial UI interaction design","WebGL deployment pipeline","Multi-format media support"],
+                tags: ["Unity","WebGL","VR","C#"],
+                githubUrl: "https://github.com/Ahmadraza1514/Vr-Video-Player",
+                liveUrl: "https://vrplayerdemo.netlify.app/",
+                videoUrl: "https://drive.google.com/file/d/15KbWDPfWEHvLRZXfwJB3yUbl-AsvyxV1/view?usp=drive_link",
+                images: ["images/proj_2.jpg","images/proj_2b.jpg"]
+            },
+            "ar-drawing": {
+                title: "AR Drawing App",
+                subtitle: "Spatial 3D Sketching in Augmented Reality",
+                description: "An augmented reality creative tool enabling real-time 3D sketching within physical environments, focusing on gesture-based interaction and spatial persistence.",
+                features: ["Real-time 3D drawing in AR space","Multiple brush systems and color controls","Environment tracking and spatial anchoring","Persistent artwork saving","Built with AR Foundation"],
+                tags: ["Unity","AR Foundation","ARCore","Mobile"],
+                githubUrl: "https://github.com/Ahmadraza1514/AR-Drawing",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/1WUdbxTuxTsICZuiGhH6pnYXiMgTEImyu/view?usp=drive_link",
+                images: ["images/proj_3.jpg"]
+            },
+            "falcon-strike": {
+                title: "Falcon Strike",
+                subtitle: "Modular Action Game with Cloud Integration",
+                description: "An action prototype utilizing AWS S3 for dynamic asset delivery and ScriptableObject-driven architecture for scalable and maintainable game systems.",
+                features: ["Cloud-based dynamic content loading","ScriptableObject-driven data architecture","Reusable modular UI framework","Cross-platform optimization","Cloud save integration"],
+                tags: ["Unity","AWS","C#","Game Design"],
+                githubUrl: "https://github.com/Ahmadraza1514/Falcon-Strike/tree/main",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/1nG3JHgp8yJhBl6UDDHbNpWKx_YpbOrXK/view?usp=drive_link",
+                images: ["images/proj_4.jpg"]
+            },
+            "ml-unity": {
+                title: "Poker♡Poker",
+                subtitle: "Real-Time Multiplayer Poker System",
+                description: "A real-time multiplayer Texas Hold'em system featuring Firebase authentication, custom backend logic, and synchronized gameplay across distributed clients.",
+                features: ["Synchronized real-time multiplayer logic","Firebase authentication and database integration","Custom backend services","Multi-table matchmaking system","Cross-platform deployment"],
+                tags: ["Unity","Firebase","Node.js","Multiplayer"],
+                githubUrl: "https://github.com/Ahmadraza1514/PokerPoker",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/1RgZ0BQrAb8M4PYGLgTtYSeHW5UkeqzYr/view?usp=drive_link",
+                images: ["images/proj_5.jpg"]
+            },
+            "ar-furniture": {
+                title: "Drone Strike",
+                subtitle: "AI-Driven Tactical Drone Combat Prototype",
+                description: "A tactical combat prototype centered on drone-based gameplay, featuring AI pathfinding, mission systems, and scalable difficulty balancing.",
+                features: ["AI-driven enemy pathfinding","Dynamic mission system","Drone customization mechanics","Scalable difficulty balancing","Real-time combat systems"],
+                tags: ["Unity","C#","AI","Action"],
+                githubUrl: "https://github.com/Ahmadraza1514/Drone-Strike",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/1JlzOAxmDG6e3tz1MzDeRhOvE0YXa_DUS/view?usp=drive_link",
+                images: ["images/proj_6.png"]
+            },
+            "vr-escape": {
+                title: "Meta Clash",
+                subtitle: "System-Driven Strategy and Base Building",
+                description: "A strategic build-and-combat game exploring systemic balance, resource economies, and backend-supported progression mechanics.",
+                features: ["Resource management systems","Troop progression and upgrades","Strategic combat interactions","Backend-supported progression","System balancing mechanics"],
+                tags: ["Unity","C#","PlayFab","Strategy"],
+                githubUrl: "https://github.com/Ahmadraza1514/MetaClash",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/1RVQaroVxvqtGrRWTMhylmScnYmteYeSb/view?usp=drive_link",
+                images: ["images/proj_7.jpg"]
+            },
+            // FIX 6: AR Navigation GitHub link corrected
+            "ar-navigation": {
+                title: "AR Navigation",
+                subtitle: "Cloud-Connected AR Wayfinding System",
+                description: "An augmented reality navigation system utilizing QR anchors and Firebase-backed data structures to deliver scalable indoor and outdoor wayfinding experiences.",
+                features: ["QR-based spatial anchor loading","Interactive 2D and 3D navigation markers","Cloud-synchronized map data","Mobile AR interface design","Scalable deployment architecture"],
+                tags: ["Unity","C#","AR Foundation","Firebase","Cloud"],
+                githubUrl: "https://github.com/Ahmadraza1514/AR-Navigation",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/1m4KtYz8a7ex2MOgYPXxszUFFZY-u6v_y/view?usp=drive_link",
+                images: ["images/proj_9.png"]
+            },
+            "multiplayer-racing": {
+                title: "Bad Biker",
+                subtitle: "Real-Time Multiplayer Racing System",
+                description: "A competitive multiplayer racing system built with Photon Fusion, emphasizing deterministic synchronization, matchmaking logic, and latency handling.",
+                features: ["Real-time deterministic synchronization","Custom matchmaking and ranking system","Vehicle customization mechanics","Latency-aware networking architecture","Cross-platform multiplayer deployment"],
+                tags: ["Unity","Photon Fusion","Multiplayer","Racing"],
+                githubUrl: "https://github.com/Ahmadraza1514/Multiplayer-Racing",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/1wET4jjSv1nj20KTqxffWPQISmijowIdP/view?usp=drive_link",
+                images: ["images/proj_8.jpg"]
+            },
+            "multiplayer-cotc": {
+                title: "Callers Of The Current",
+                subtitle: "Competitive Online Card Battler",
+                description: "A 1v1 competitive online card battler built with Photon Fusion, combining deck-building systems, real-time synchronization, and backend-driven matchmaking.",
+                features: ["Server-authoritative multiplayer architecture","Deck-building and strategic mechanics","Real-time player synchronization","Matchmaking and ranking systems","Backend-integrated game logic"],
+                tags: ["Unity","Photon Fusion","Multiplayer","Card Game","Backend"],
+                githubUrl: "https://github.com/Ahmadraza1514/COTC",
+                liveUrl: "#",
+                videoUrl: "https://drive.google.com/file/d/15acjgbcc0NBQSANOvOLPX54RjMpR3ehn/view?usp=drive_link",
+                images: ["images/proj_10a.jpg"]
+            }
+        };
 
-  "vr-video-player": {
-    title: "VR Video Player",
-    subtitle: "Immersive WebGL Virtual Cinema Experience",
-    description: "A WebGL-based VR video platform exploring immersive playback, spatial UI placement, and interaction ergonomics within a customizable virtual environment.",
-    features: [
-      "360° immersive video playback",
-      "Customizable virtual viewing environments",
-      "Spatial UI interaction design",
-      "WebGL deployment pipeline",
-      "Multi-format media support"
-    ],
-    tags: ["Unity","WebGL","VR","C#"],
-    githubUrl: "https://github.com/Ahmadraza1514/Vr-Video-Player",
-    liveUrl: "https://vrplayerdemo.netlify.app/",
-    videoUrl: "https://drive.google.com/file/d/15KbWDPfWEHvLRZXfwJB3yUbl-AsvyxV1/view?usp=drive_link",
-    images: ["images/proj_2.jpg","images/proj_2b.jpg"]
-  },
+        // AOS
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-  "ar-drawing": {
-    title: "AR Drawing App",
-    subtitle: "Spatial 3D Sketching in Augmented Reality",
-    description: "An augmented reality creative tool enabling real-time 3D sketching within physical environments, focusing on gesture-based interaction and spatial persistence.",
-    features: [
-      "Real-time 3D drawing in AR space",
-      "Multiple brush systems and color controls",
-      "Environment tracking and spatial anchoring",
-      "Persistent artwork saving",
-      "Built with AR Foundation"
-    ],
-    tags: ["Unity","AR Foundation","ARCore","Mobile"],
-    githubUrl: "https://github.com/Ahmadraza1514/AR-Drawing",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/1WUdbxTuxTsICZuiGhH6pnYXiMgTEImyu/view?usp=drive_link",
-    images: ["images/proj_3.jpg"]
-  },
-
-  "falcon-strike": {
-    title: "Falcon Strike",
-    subtitle: "Modular Action Game with Cloud Integration",
-    description: "An action prototype utilizing AWS S3 for dynamic asset delivery and ScriptableObject-driven architecture for scalable and maintainable game systems.",
-    features: [
-      "Cloud-based dynamic content loading",
-      "ScriptableObject-driven data architecture",
-      "Reusable modular UI framework",
-      "Cross-platform optimization",
-      "Cloud save integration"
-    ],
-    tags: ["Unity","AWS","C#","Game Design"],
-    githubUrl: "https://github.com/Ahmadraza1514/Falcon-Strike/tree/main",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/1nG3JHgp8yJhBl6UDDHbNpWKx_YpbOrXK/view?usp=drive_link",
-    images: ["images/proj_4.jpg"]
-  },
-
-  "ml-unity": {
-    title: "Poker♡Poker",
-    subtitle: "Real-Time Multiplayer Poker System",
-    description: "A real-time multiplayer Texas Hold’em system featuring Firebase authentication, custom backend logic, and synchronized gameplay across distributed clients.",
-    features: [
-      "Synchronized real-time multiplayer logic",
-      "Firebase authentication and database integration",
-      "Custom backend services",
-      "Multi-table matchmaking system",
-      "Cross-platform deployment"
-    ],
-    tags: ["Unity","Firebase","Node.js","Multiplayer"],
-    githubUrl: "https://github.com/Ahmadraza1514/PokerPoker",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/1RgZ0BQrAb8M4PYGLgTtYSeHW5UkeqzYr/view?usp=drive_link",
-    images: ["images/proj_5.jpg"]
-  },
-
-  "ar-furniture": {
-    title: "Drone Strike",
-    subtitle: "AI-Driven Tactical Drone Combat Prototype",
-    description: "A tactical combat prototype centered on drone-based gameplay, featuring AI pathfinding, mission systems, and scalable difficulty balancing.",
-    features: [
-      "AI-driven enemy pathfinding",
-      "Dynamic mission system",
-      "Drone customization mechanics",
-      "Scalable difficulty balancing",
-      "Real-time combat systems"
-    ],
-    tags: ["Unity","C#","AI","Action"],
-    githubUrl: "https://github.com/Ahmadraza1514/Drone-Strike",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/1JlzOAxmDG6e3tz1MzDeRhOvE0YXa_DUS/view?usp=drive_link",
-    images: ["images/proj_6.png"]
-  },
-
-  "vr-escape": {
-    title: "Meta Clash",
-    subtitle: "System-Driven Strategy and Base Building",
-    description: "A strategic build-and-combat game exploring systemic balance, resource economies, and backend-supported progression mechanics.",
-    features: [
-      "Resource management systems",
-      "Troop progression and upgrades",
-      "Strategic combat interactions",
-      "Backend-supported progression",
-      "System balancing mechanics"
-    ],
-    tags: ["Unity","C#","PlayFab","Strategy"],
-    githubUrl: "https://github.com/Ahmadraza1514/MetaClash",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/1RVQaroVxvqtGrRWTMhylmScnYmteYeSb/view?usp=drive_link",
-    images: ["images/proj_7.jpg"]
-  },
-
-  "ar-navigation": {
-    title: "AR Navigation",
-    subtitle: "Cloud-Connected AR Wayfinding System",
-    description: "An augmented reality navigation system utilizing QR anchors and Firebase-backed data structures to deliver scalable indoor and outdoor wayfinding experiences.",
-    features: [
-      "QR-based spatial anchor loading",
-      "Interactive 2D and 3D navigation markers",
-      "Cloud-synchronized map data",
-      "Mobile AR interface design",
-      "Scalable deployment architecture"
-    ],
-    tags: ["Unity","C#","AR Foundation","Firebase","Cloud"],
-    githubUrl: "https://github.com/Ahmadraza1514/MetaClash",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/1m4KtYz8a7ex2MOgYPXxszUFFZY-u6v_y/view?usp=drive_link",
-    images: ["images/proj_9.png"]
-  },
-
-  "multiplayer-racing": {
-    title: "Bad Biker",
-    subtitle: "Real-Time Multiplayer Racing System",
-    description: "A competitive 1v1 multiplayer racing system built with Photon Fusion, emphasizing deterministic synchronization, matchmaking logic, and latency handling.",
-    features: [
-      "Real-time deterministic synchronization",
-      "Custom matchmaking and ranking system",
-      "Vehicle customization mechanics",
-      "Latency-aware networking architecture",
-      "Cross-platform multiplayer deployment"
-    ],
-    tags: ["Unity","Photon Fusion","Multiplayer","Racing"],
-    githubUrl: "https://github.com/Ahmadraza1514/Multiplayer-Racing",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/1wET4jjSv1nj20KTqxffWPQISmijowIdP/view?usp=drive_link",
-    images: ["images/proj_8.jpg"]
-  },
-
-  "multiplayer-cotc": {
-    title: "Callers Of The Current",
-    subtitle: "Competitive Online Card Battler",
-    description: "A 1v1 competitive online card battler built with Photon Fusion, combining deck-building systems, real-time synchronization, and backend-driven matchmaking.",
-    features: [
-      "Server-authoritative multiplayer architecture",
-      "Deck-building and strategic mechanics",
-      "Real-time player synchronization",
-      "Matchmaking and ranking systems",
-      "Backend-integrated game logic"
-    ],
-    tags: ["Unity","Photon Fusion","Multiplayer","Card Game","Backend"],
-    githubUrl: "https://github.com/Ahmadraza1514/Multiplayer-Racing",
-    liveUrl: "#",
-    videoUrl: "https://drive.google.com/file/d/15acjgbcc0NBQSANOvOLPX54RjMpR3ehn/view?usp=drive_link",
-    images: ["images/proj_10a.jpg"]
-  }
-};
-
-
-        // Initialize AOS animation
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Hamburger Menu Toggle
+        // Hamburger
         const hamburger = document.querySelector('.hamburger');
         const navbar = document.querySelector('.navbar');
-        
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navbar.classList.toggle('active');
         });
-        
-        // Close menu when clicking on a link
         document.querySelectorAll('.navbar a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navbar.classList.remove('active');
             });
         });
-        
-        // Sticky Header
+
+        // Sticky header + back to top
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            header.classList.toggle('scrolled', window.scrollY > 100);
-            
-            // Show/hide back to top button
-            const backToTop = document.getElementById('backToTop');
-            if (window.pageYOffset > 300) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
+            document.querySelector('header').classList.toggle('scrolled', window.scrollY > 100);
+            document.getElementById('backToTop').style.display = window.pageYOffset > 300 ? 'block' : 'none';
         });
-        
-        // Typing Animation
-        const phrases = ["I Build AR Applications", "I Create Immersive Games", "I Develop VR Experiences"];
-        let currentPhrase = 0;
-        let letterIndex = 0;
-        const typingElement = document.getElementById('typing-text');
-        let isDeleting = false;
-        let typingSpeed = 150;
-        
+
+        // Typing animation (FIX 7: more relevant phrases)
+        const phrases = [
+            "Unity & AR/VR Developer",
+            "HoloLens | AR Foundation | Photon",
+            "Available for Remote Work"
+        ];
+        let currentPhrase = 0, letterIndex = 0, isDeleting = false, typingSpeed = 150;
+        const typingEl = document.getElementById('typing-text');
+
         function typeWriter() {
-            const fullPhrase = phrases[currentPhrase];
-            
+            const full = phrases[currentPhrase];
             if (isDeleting) {
-                typingElement.textContent = fullPhrase.substring(0, letterIndex - 1);
+                typingEl.textContent = full.substring(0, letterIndex - 1);
                 letterIndex--;
                 typingSpeed = 50;
             } else {
-                typingElement.textContent = fullPhrase.substring(0, letterIndex + 1);
+                typingEl.textContent = full.substring(0, letterIndex + 1);
                 letterIndex++;
                 typingSpeed = 150;
             }
-            
-            if (!isDeleting && letterIndex === fullPhrase.length) {
-                isDeleting = true;
-                typingSpeed = 1500; // pause at end of phrase
-            } else if (isDeleting && letterIndex === 0) {
-                isDeleting = false;
-                currentPhrase = (currentPhrase + 1) % phrases.length;
-                typingSpeed = 500; // pause before starting next phrase
-            }
-            
+            if (!isDeleting && letterIndex === full.length) { isDeleting = true; typingSpeed = 1800; }
+            else if (isDeleting && letterIndex === 0) { isDeleting = false; currentPhrase = (currentPhrase + 1) % phrases.length; typingSpeed = 500; }
             setTimeout(typeWriter, typingSpeed);
         }
-        
-        // Start the typing animation
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(typeWriter, 1000);
-        });
-        
-        // Custom Cursor
+        setTimeout(typeWriter, 1000);
+
+        // Custom cursor
         const cursor = document.querySelector('.cursor');
         const cursorFollower = document.querySelector('.cursor-follower');
-        
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
-            
             setTimeout(() => {
                 cursorFollower.style.left = e.clientX + 'px';
                 cursorFollower.style.top = e.clientY + 'px';
             }, 100);
         });
-        
-        // Cursor Effects
-        document.querySelectorAll('a, button, .project-card').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(3)';
-                cursor.style.opacity = '0.3';
-                cursorFollower.style.transform = 'scale(2)';
-                cursorFollower.style.opacity = '0.5';
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursor.style.opacity = '1';
-                cursorFollower.style.transform = 'scale(1)';
-                cursorFollower.style.opacity = '1';
-            });
+        document.querySelectorAll('a, button, .project-card').forEach(el => {
+            el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(3)'; cursor.style.opacity = '0.3'; });
+            el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; cursor.style.opacity = '1'; });
         });
-        
-        // Smooth scrolling for anchor links
+
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
             });
-        });
-        
-        // Back to top button
-        document.getElementById('backToTop').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
         });
 
-        // Project Modal functionality
+        document.getElementById('backToTop').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Modal
         const modal = document.getElementById('projectModal');
-        const closeModal = document.querySelector('.close-modal');
-        const viewProjectButtons = document.querySelectorAll('.view-project');
-
-        // Open modal when project is clicked
-        viewProjectButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
+        document.querySelectorAll('.view-project').forEach(btn => {
+            btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const projectId = this.getAttribute('data-project-id');
-                openProjectModal(projectId);
+                openProjectModal(btn.getAttribute('data-project-id'));
             });
         });
+        document.querySelector('.close-modal').addEventListener('click', () => modal.style.display = 'none');
+        window.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
 
-        // Close modal
-        closeModal.addEventListener('click', function() {
-            modal.style.display = 'none';
-        });
+        function openProjectModal(id) {
+            const p = projects[id];
+            if (!p) return;
+            document.getElementById('modalProjectTitle').textContent = p.title;
+            document.getElementById('modalProjectSubtitle').textContent = p.subtitle;
+            document.getElementById('modalProjectDescription').textContent = p.description;
 
-        // Close modal when clicking outside
-        window.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        function openProjectModal(projectId) {
-            const project = projects[projectId];
-            if (!project) return;
-
-            // Set modal content
-            document.getElementById('modalProjectTitle').textContent = project.title;
-            document.getElementById('modalProjectSubtitle').textContent = project.subtitle;
-            document.getElementById('modalProjectDescription').textContent = project.description;
-
-            // Set tags
-            const tagsContainer = document.getElementById('modalProjectTags');
-            tagsContainer.innerHTML = '';
-            project.tags.forEach(tag => {
-                const tagElement = document.createElement('span');
-                tagElement.className = 'project-detail-tag';
-                tagElement.textContent = tag;
-                tagsContainer.appendChild(tagElement);
+            const tagsEl = document.getElementById('modalProjectTags');
+            tagsEl.innerHTML = '';
+            p.tags.forEach(t => {
+                const s = document.createElement('span');
+                s.className = 'project-detail-tag';
+                s.textContent = t;
+                tagsEl.appendChild(s);
             });
 
-            // Set features
-            const featuresContainer = document.getElementById('modalProjectFeatures');
-            featuresContainer.innerHTML = '';
-            project.features.forEach(feature => {
-                const featureElement = document.createElement('li');
-                featureElement.textContent = feature;
-                featuresContainer.appendChild(featureElement);
+            const featEl = document.getElementById('modalProjectFeatures');
+            featEl.innerHTML = '';
+            p.features.forEach(f => {
+                const li = document.createElement('li');
+                li.textContent = f;
+                featEl.appendChild(li);
             });
 
-            // Set links
-            document.getElementById('modalProjectGithub').href = project.githubUrl || '#';
-            document.getElementById('modalProjectLive').href = project.liveUrl || '#';
+            document.getElementById('modalProjectGithub').href = p.githubUrl || '#';
+            document.getElementById('modalProjectLive').href = p.liveUrl || '#';
+            if (p.liveUrl === '#') document.getElementById('modalProjectLive').style.display = 'none';
+            else document.getElementById('modalProjectLive').style.display = 'inline-flex';
 
-            // Set images
-            const imagesContainer = document.getElementById('modalProjectImages');
-            imagesContainer.innerHTML = '';
-            if (project.images && project.images.length > 0) {
-                project.images.forEach(image => {
-                    const imgElement = document.createElement('img');
-                    imgElement.className = 'project-detail-image';
-                    imgElement.src = image;
-                    imgElement.alt = project.title;
-                    imagesContainer.appendChild(imgElement);
-                });
-            }
+            const imgEl = document.getElementById('modalProjectImages');
+            imgEl.innerHTML = '';
+            (p.images || []).forEach(src => {
+                const img = document.createElement('img');
+                img.className = 'project-detail-image';
+                img.src = src; img.alt = p.title;
+                imgEl.appendChild(img);
+            });
 
-            // Create or update video container
-            let videoContainer = document.getElementById('modalProjectVideoContainer');
-            if (!videoContainer) {
-                videoContainer = document.createElement('div');
-                videoContainer.id = 'modalProjectVideoContainer';
-                videoContainer.className = 'modal-video-container';
-                
-                // Find the media container and insert the video at the top
-                const mediaContainer = document.querySelector('.project-detail-media');
-                mediaContainer.insertBefore(videoContainer, mediaContainer.firstChild);
-            }
-            
-            videoContainer.innerHTML = ''; // Clear previous video
-
-            // Check if Google Drive link or direct mp4
-            if (project.videoUrl.includes('drive.google.com')) {
-                const fileId = project.videoUrl.match(/\/d\/([^\/]+)/)[1];
+            const vidEl = document.getElementById('modalProjectVideoContainer');
+            vidEl.innerHTML = '';
+            if (p.videoUrl && p.videoUrl.includes('drive.google.com')) {
+                const fileId = p.videoUrl.match(/\/d\/([^\/]+)/)[1];
                 const iframe = document.createElement('iframe');
                 iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
                 iframe.allow = 'autoplay';
-                iframe.frameBorder = '0';
                 iframe.allowFullscreen = true;
-                videoContainer.appendChild(iframe);
-            } else if (project.videoUrl) {
-                const video = document.createElement('video');
-                video.src = project.videoUrl;
-                video.controls = true;
-                videoContainer.appendChild(video);
+                vidEl.appendChild(iframe);
             }
 
-            // Show modal
             modal.style.display = 'block';
-            
-            // Scroll to top of modal
             modal.scrollTop = 0;
         }
     </script>
